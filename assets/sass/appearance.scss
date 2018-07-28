@@ -1,0 +1,96 @@
+// Logo
+
+img.custom-logo {
+    min-width: 25vw;
+}
+
+ @media only screen and ( max-width: 900px ) {
+
+ }
+
+
+
+// Home Module
+
+.home {
+    img.custom-logo {
+        min-width: 50vw;
+    }
+
+    .site {
+        height: 100vh;
+        background-image: url(/wp-content/uploads/2018/07/Layer-2.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 10rem 5rem 0;
+        text-align: -webkit-right;
+        // Grid Home Only   
+        .site-content {
+            display: -ms-grid;
+            display: grid;
+            grid-gap: 20px;
+            grid-template-rows: 1fr 1fr 1fr;
+            .content-area {
+                grid-row-start: 3;
+                .entry-content {
+                    margin-top: 0;
+                    h1 {
+                        margin: 0;
+                    }
+                }
+            }
+            // Menu Addon
+            .menu-main-navigation-container {
+                overflow: hidden;
+                padding: 10px;
+                .menu {
+                    z-index: 100 !important; 
+                    li {
+                    display: inline-block;
+                    }
+                }
+                .elpuas__intro-block {
+                    grid-row-start: 2;
+                }
+            }
+        }
+    }
+}
+
+// Page Module
+
+.page {
+    .site {
+    .site-content {
+
+    }
+    .site-header {
+        .main-navigation {
+            margin-top : 2rem; 
+            li {
+            float: initial;
+            position: initial;
+            text-align: right;
+            &.current-menu-item {
+                a {
+                    font-size: 48px;
+                    color: $light-color;
+                }
+            }
+            a {
+                color: $secondary-color;
+                font-family: $passion-font;
+                text-transform: uppercase;
+                line-height: 4rem;
+                font-size: 24px;
+                }
+            }
+        }
+    }
+    .site-footer {}
+    }
+}
+
+@media only screen and ( max-width: 900px ) {
+
+}

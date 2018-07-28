@@ -6,7 +6,6 @@
  *
  * @package elpuas
  */
-
 get_header();
 ?>
 

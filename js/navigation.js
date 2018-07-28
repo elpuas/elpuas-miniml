@@ -30,7 +30,7 @@
 		menu.className += ' nav-menu';
 	}
 
-
+/*
 	button.onclick = function() {
 
 		if ( -1 !== container.className.indexOf( 'toggled' ) ) {
@@ -44,7 +44,7 @@
 			}
 	};
 
-
+*/
 	
 	// Get all the link elements within the menu.
 	links    = menu.getElementsByTagName( 'a' );

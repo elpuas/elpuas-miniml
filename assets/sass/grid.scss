@@ -1,0 +1,11 @@
+// Page template Grid 
+
+.page:not(.home) .site {
+    display: grid;
+    grid-template-columns: 1fr 25vw;
+    padding: 2rem;
+    grid-gap: 50px;
+    .site-content {}
+    .site-header {}
+    .site-footer {}
+}

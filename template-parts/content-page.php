@@ -11,7 +11,16 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+	<?php 
+		if ( is_front_page() && ! is_home() ) {
+			// Don't Show a Shit!
+		} else {
+			the_title( '<h1 class="entry-title">', '</h1>' ); 
+		}
+	?>
+
+
+		
 	</header><!-- .entry-header -->
 
 	<?php elpuas_post_thumbnail(); ?>

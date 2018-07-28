@@ -6,8 +6,8 @@
  *
  * @package elpuas
  */
-
 get_header();
+get_sidebar();
 ?>
 
 	<div id="primary" class="content-area">
@@ -33,5 +33,6 @@ get_header();
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+get_template_part( 'template-parts/navigation' );
+get_header();
 get_footer();

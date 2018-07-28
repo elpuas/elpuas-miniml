@@ -11,7 +11,6 @@
  *
  * @package elpuas
  */
-
 get_header();
 ?>
 
@@ -24,7 +23,7 @@ get_header();
 			if ( is_home() && ! is_front_page() ) :
 				?>
 				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+					<h2 class="page-title screen-reader-text"><?php single_post_title(); ?></h2>
 				</header>
 				<?php
 			endif;
@@ -52,8 +51,29 @@ get_header();
 		?>
 
 		</main><!-- #main -->
-	</div><!-- #primary -->
+		<?php
+		if ( is_front_page() && ! is_home() ) :
 
+			echo '<div class="elpuas__intro-nav-menu">' . wp_nav_menu() . '</div>';
+			
+			echo wp_footer();
+
+			endif;
+		?>	
+	</div><!-- #primary -->
 <?php
-get_sidebar();
-get_footer();
+if ( is_front_page() && ! is_home() ) :
+
+		echo '<div class="elpuas__intro-block">' . get_custom_logo() . '</div>';
+
+	 else :
+
+		echo '</div><!-- #content -->'; 
+
+		include( 'template-parts/navigation.php' );
+
+		get_sidebar();
+
+		get_footer();
+
+	endif;

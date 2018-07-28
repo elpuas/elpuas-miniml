@@ -163,3 +163,8 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * My Shit.
+ */
+require get_template_directory() . '/inc/elpuas-functions.php';
+

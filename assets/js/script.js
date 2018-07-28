@@ -1,5 +1,75 @@
 jQuery(document).ready(function($){
+
+    // Menu Toggled Action Function
+
+    eclick();
     
+    function eclick() {
+        $('.menu-toggle').click( function () {
+
+           var $nav = $('.main-navigation');
+
+           var $attr = $('.menu-toggle').attr("aria-expanded","true");
+
+           if ($nav === $nav ) {
+
+            $nav.addClass('toggled');
+
+           } else {
+
+               $nav.removeClass('toggled');
+
+           }
+
+           if ($attr === $('.menu-toggle, .menu').attr("aria-expanded","true")) {
+
+            $('.menu-toggle, .menu').attr("aria-expanded","false");
+
+           } else {
+
+            $('.menu-toggle, .menu').attr("aria-expanded","true");
+
+           }
+           
+        })
+    }
+
+    // Show Menu on Hover
+    
+    showMenu();
+
+    function showMenu() {
+       var $homeMenu =  $('.home .menu');
+
+       $homeMenu.css('display', 'none');
+
+       $('.site-content').hover( function() {
+
+        $homeMenu.fadeIn("slow");
+
+       });
+    
+    }
+
+    // Hover Effect;
+
+    hoverEffect();
+
+    function hoverEffect() { 
+
+        $pageMenu = $('.page:not(.home) .menu a');
+        console.log($pageMenu);
+        // $pageMenu = $pageMenu.each();
+        console.log($pageMenu);
+        $pageMenu.hover( function(){
+            console.log('hola hover');
+            $pageMenu.toggleClass('bounceIn').css('font-size', '48px');
+            $('.current-menu-item').toggleClass('bounceOut').css('font-size', '24px');
+        });
+    }
+
+
+
     /*
      * Ajax Transitions
      */
@@ -28,6 +98,7 @@ jQuery(document).ready(function($){
             },
             onAfter: function( $container ) {
                 addBlacklistClass();
+                eclick();
                 var $hash = $( window.location.hash );
  
                 if ( $hash.length !== 0 ) {
@@ -45,11 +116,14 @@ jQuery(document).ready(function($){
             }
         };
      
-        $( '#page' ).smoothState( settings );
+        // $( '#page' ).smoothState( settings );
     } );
 
    $('nav button').addClass('wp-link');
-    console.log("%c Made with  💖 and a lot of  ☕ by el.puas | https://elpuas.com ", "color:#fff;background:gold;");
+
+  
+    
+   console.log("%c Made with  💖 and a lot of  ☕ by el.puas | https://elpuas.com ", "color:#fff;background:gold;");
 });
 
 
