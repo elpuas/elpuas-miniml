@@ -59,24 +59,41 @@ img.custom-logo {
 
 // Page Module
 
-.page {
+.page:not(.home) {
+
     .site {
+
     .site-content {
 
+        .site-main {
+
+            h1 {
+                font-size: 5rem;
+                line-height: 2rem;
+                padding-bottom: 0;
+                letter-spacing: 1PX;
+                font-weight: initial;
+            }
+        }
     }
+
     .site-header {
+
         .main-navigation {
             margin-top : 2rem; 
+
             li {
             float: initial;
             position: initial;
             text-align: right;
             &.current-menu-item {
+
                 a {
                     font-size: 48px;
                     color: $light-color;
                 }
             }
+
             a {
                 color: $secondary-color;
                 font-family: $passion-font;
@@ -87,10 +104,88 @@ img.custom-logo {
             }
         }
     }
-    .site-footer {}
+
+    .site-footer {
+
+        .site-info {
+
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                text-align: right;
+
+                    li {
+                        font-size: 3rem;
+                    }
+            }
+        }
+    }
     }
 }
 
 @media only screen and ( max-width: 900px ) {
 
 }
+
+// Footer Module
+
+
+
+// Template Styles
+
+.entry-content {
+    p {
+        color: $light-color;
+    }
+}
+
+.home {
+    
+    .entry-header {
+        background:initial !important;
+    }
+
+    .home .entry-content {
+        padding-top: 0 !important;
+    }
+
+}
+
+.page:not(.home) {
+
+    .site-header {
+        position: fixed;
+        top: 20vh;
+        right: 26px;
+    }
+
+    a.custom-logo-link {
+        position: fixed;
+        right: 25px;
+        top: 25px;
+    }
+
+    .entry-content {
+        padding-top: 138px;
+    }
+
+    .entry-header {
+        position: fixed;
+        left: 0;
+        background:$secondary-color;
+        top: 0;
+        padding: 1rem;
+
+            h1 {
+                color: $primary-color;
+            }
+    }
+
+    footer {
+        position: fixed;
+        right: 25px;
+        top: 60vh;
+    }
+}
+

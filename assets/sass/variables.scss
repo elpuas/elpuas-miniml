@@ -6,10 +6,24 @@ $light-color: #cdf8fe;
 
 // Typos
 
-$passion-font: 'Passion One', cursive;
+$passion-font: 'Anton', sans-serif;
+$copy-font: 'Roboto', Helvetica, Arial, sans-serif;
+$copy-font-size: 1.8rem;
 
 // Common Styles
 
 body {
     background-color: $primary-color;
+}
+
+p {
+    font-family: $copy-font;
+    font-size: $copy-font-size;
+}
+
+a {
+    color: $secondary-color;
+    &:hover{
+        color: white;
+    }
 }

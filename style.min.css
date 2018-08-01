@@ -138,8 +138,14 @@ embed,iframe,object{max-width:100%}
 .gallery-columns-9 .gallery-item{max-width:11.11%}
 .gallery-caption{display:block}
 body{background-color:#002e5c}
-.page:not(.home) .site{display:-ms-grid;display:grid;-ms-grid-columns:1fr 25vw;grid-template-columns:1fr 25vw;padding:2rem;grid-gap:50px}
-h1,h2,h3,h4{font-family:"Passion One",cursive !important;text-transform:uppercase;color:#cdf8fe}
+p{font-family:"Roboto",Helvetica,Arial,sans-serif;font-size:1.8rem}
+a{color:#6dcff6}
+a:hover{color:white}
+.page:not(.home) .site{display:-ms-grid;display:grid;-ms-grid-columns:1fr 25vw;grid-template-columns:1fr 25vw;padding:2rem;grid-gap:50px;-ms-grid-rows:10vh 40vh 20vh;grid-template-rows:10vh 40vh 20vh}
+.page:not(.home) .site .site-content{-ms-grid-row:1;grid-row-start:1;grid-row-end:4}
+.page:not(.home) .site .site-header{-ms-grid-row:2;grid-row-start:2;-ms-grid-column:2;grid-column-start:2}
+.page:not(.home) .site .site-footer{-ms-grid-column:2;grid-column-start:2;-ms-grid-row:3;grid-row-start:3}
+h1,h2,h3,h4{font-family:"Anton",sans-serif !important;text-transform:uppercase;color:#cdf8fe}
 .site-content{-webkit-transition:-webkit-transform .28s,opacity .28s;-webkit-transition:opacity .28s,-webkit-transform .28s;transition:opacity .28s,-webkit-transform .28s;transition:transform .28s,opacity .28s;transition:transform .28s,opacity .28s,-webkit-transform .28s}
 .slide-out .site-content{-webkit-transform:translate3d(0,100px,0);-ms-transform:translate3d(0,100px,0);transform:translate3d(0,100px,0);opacity:0}
 .animated{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both}
@@ -155,6 +161,7 @@ h1,h2,h3,h4{font-family:"Passion One",cursive !important;text-transform:uppercas
 .animated.slower{-webkit-animation-duration:3s;animation-duration:3s}
 .zoomIn{-webkit-animation-name:zoomIn;animation-name:zoomIn}
 .bounceIn{-webkit-animation-duration:.75s;animation-duration:.75s;-webkit-animation-name:bounceIn;animation-name:bounceIn}
+.bounceOut{-webkit-animation-duration:.75s;animation-duration:.75s;-webkit-animation-name:bounceOut;animation-name:bounceOut}
 img.custom-logo{min-width:25vw}
 .home img.custom-logo{min-width:50vw}
 .home .site{height:100vh;background-image:url(/wp-content/uploads/2018/07/Layer-2.png);background-repeat:no-repeat;background-size:cover;padding:10rem 5rem 0;text-align:-webkit-right}
@@ -166,10 +173,22 @@ img.custom-logo{min-width:25vw}
 .home .site .site-content .menu-main-navigation-container .menu{z-index:100 !important}
 .home .site .site-content .menu-main-navigation-container .menu li{display:inline-block}
 .home .site .site-content .menu-main-navigation-container .elpuas__intro-block{-ms-grid-row:2;grid-row-start:2}
-.page .site .site-header .main-navigation{margin-top:2rem}
-.page .site .site-header .main-navigation li{float:initial;position:initial;text-align:right}
-.page .site .site-header .main-navigation li.current-menu-item a{font-size:48px;color:#cdf8fe}
-.page .site .site-header .main-navigation li a{color:#6dcff6;font-family:"Passion One",cursive;text-transform:uppercase;line-height:4rem;font-size:24px}
+.page:not(.home) .site .site-content .site-main h1{font-size:5rem;line-height:2rem;padding-bottom:0;letter-spacing:1PX;font-weight:initial}
+.page:not(.home) .site .site-header .main-navigation{margin-top:2rem}
+.page:not(.home) .site .site-header .main-navigation li{float:initial;position:initial;text-align:right}
+.page:not(.home) .site .site-header .main-navigation li.current-menu-item a{font-size:48px;color:#cdf8fe}
+.page:not(.home) .site .site-header .main-navigation li a{color:#6dcff6;font-family:"Anton",sans-serif;text-transform:uppercase;line-height:4rem;font-size:24px}
+.page:not(.home) .site .site-footer .site-info ul{list-style:none;margin:0;padding:0;text-align:right}
+.page:not(.home) .site .site-footer .site-info ul li{font-size:3rem}
+.entry-content p{color:#cdf8fe}
+.home .entry-header{background:initial !important}
+.home .home .entry-content{padding-top:0 !important}
+.page:not(.home) .site-header{position:fixed;top:20vh;right:26px}
+.page:not(.home) a.custom-logo-link{position:fixed;right:25px;top:25px}
+.page:not(.home) .entry-content{padding-top:138px}
+.page:not(.home) .entry-header{position:fixed;left:0;background:#6dcff6;top:0;padding:1rem}
+.page:not(.home) .entry-header h1{color:#002e5c}
+.page:not(.home) footer{position:fixed;right:25px;top:60vh}
 @media(prefers-reduced-motion){.animated{-webkit-animation:unset !important;animation:unset !important;-webkit-transition:none !important;transition:none !important}
 }@media screen and (min-width:37.5em){.menu-toggle{display:none}
 .main-navigation ul{display:block}
@@ -191,4 +210,10 @@ to{opacity:1;-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}
 60%{opacity:1;-webkit-transform:scale3d(1.03,1.03,1.03);transform:scale3d(1.03,1.03,1.03)}
 80%{-webkit-transform:scale3d(0.97,0.97,0.97);transform:scale3d(0.97,0.97,0.97)}
 to{opacity:1;-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}
+}@-webkit-keyframes bounceOut{20%{-webkit-transform:scale3d(0.9,0.9,0.9);transform:scale3d(0.9,0.9,0.9)}
+50%,55%{opacity:1;-webkit-transform:scale3d(1.1,1.1,1.1);transform:scale3d(1.1,1.1,1.1)}
+to{opacity:0;-webkit-transform:scale3d(0.3,0.3,0.3);transform:scale3d(0.3,0.3,0.3)}
+}@keyframes bounceOut{20%{-webkit-transform:scale3d(0.9,0.9,0.9);transform:scale3d(0.9,0.9,0.9)}
+50%,55%{opacity:1;-webkit-transform:scale3d(1.1,1.1,1.1);transform:scale3d(1.1,1.1,1.1)}
+to{opacity:0;-webkit-transform:scale3d(0.3,0.3,0.3);transform:scale3d(0.3,0.3,0.3)}
 }

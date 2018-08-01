@@ -57,14 +57,11 @@ jQuery(document).ready(function($){
 
     function hoverEffect() { 
 
-        $pageMenu = $('.page:not(.home) .menu a');
-        console.log($pageMenu);
-        // $pageMenu = $pageMenu.each();
-        console.log($pageMenu);
+        $pageMenu = $('.page:not(.home) .menu li:not(.current-menu-item)');
         $pageMenu.hover( function(){
-            console.log('hola hover');
-            $pageMenu.toggleClass('bounceIn').css('font-size', '48px');
-            $('.current-menu-item').toggleClass('bounceOut').css('font-size', '24px');
+            $(this).find('a').addClass('bounceIn').css('font-size', '48px');
+        }, function(){
+            $(this).find('a').removeClass('bounceIn').css('font-size', '24px');
         });
     }
 
@@ -119,7 +116,7 @@ jQuery(document).ready(function($){
         // $( '#page' ).smoothState( settings );
     } );
 
-   $('nav button').addClass('wp-link');
+   // $('nav button').addClass('wp-link');
 
   
     

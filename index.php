@@ -68,7 +68,9 @@ if ( is_front_page() && ! is_home() ) :
 
 	 else :
 
-		echo '</div><!-- #content -->'; 
+		echo '</div><!-- #content -->';
+		
+		the_custom_logo();
 
 		include( 'template-parts/navigation.php' );
 

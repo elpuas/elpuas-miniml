@@ -41,7 +41,39 @@ add_filter('admin_footer_text', 'remove_footer_admin');
  */
 
 function elpuas_enqueue_fonts(){
-    wp_enqueue_style( 'greenroom-google-fonts', 'https://fonts.googleapis.com/css?family=Passion+One:700', false );
+    wp_enqueue_style( 'elpuas-google-fonts', 'https://fonts.googleapis.com/css?family=Anton', false );
 }
 
 add_action( 'wp_enqueue_scripts', 'elpuas_enqueue_fonts' );
+
+/*
+ * Add Font Awesome 
+ */
+
+function elpuas_enqueue_icons(){
+    wp_enqueue_style( 'elpuas-fa-icons',  get_template_directory_uri() . '/assets/css/fontawesome.min.css', get_the_time('U') );
+    // wp_enqueue_script( 'elpuas-fa-icons',  get_template_directory_uri() . '/assets/js/fontawesome.min.js', true );
+}
+
+add_action( 'wp_enqueue_scripts', 'elpuas_enqueue_icons' );
+
+/*
+ * Replace Site Info Credits 
+ */
+
+add_filter('footer_credits', 'elpuas_footer_creds_filter');
+
+function elpuas_footer_creds_filter(  ) {
+	echo  '<ul>
+    <li>
+        <a href="#"><i class="fab fa-github"></i></a>
+    </li>
+    <li>
+        <a href="#"><i class="fab fa-wordpress"></i></a>
+    </li>
+    <li>
+        <a href="#"><i class="fab fa-wordpress"></i></a>
+    </li>
+</ul>';
+	
+}
