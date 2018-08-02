@@ -182,7 +182,7 @@ img.custom-logo{min-width:25vw}
 .page:not(.home) .site .site-footer .site-info ul li{font-size:3rem}
 .entry-content p{color:#cdf8fe}
 .home .entry-header{background:initial !important}
-.home .home .entry-content{padding-top:0 !important}
+.home .entry-content{padding-top:0 !important}
 .page:not(.home) .site-header{position:fixed;top:20vh;right:26px}
 .page:not(.home) a.custom-logo-link{position:fixed;right:25px;top:25px}
 .page:not(.home) .entry-content{padding-top:138px}
