@@ -6,11 +6,9 @@
  *
  * @package elpuas
  */
-get_header();
-get_sidebar();
-?>
+get_header(); ?>
 
-	<div id="primary" class="content-area">
+<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
 		<?php
@@ -21,10 +19,12 @@ get_sidebar();
 
 			the_post_navigation();
 
+			/*
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :
 				comments_template();
 			endif;
+			*/
 
 		endwhile; // End of the loop.
 		?>
@@ -33,6 +33,11 @@ get_sidebar();
 	</div><!-- #primary -->
 
 <?php
-get_template_part( 'template-parts/navigation' );
-get_header();
-get_footer();
+
+	the_custom_logo();
+
+	get_template_part( 'template-parts/navigation' );
+
+	get_footer();
+	
+	get_sidebar();

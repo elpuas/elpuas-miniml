@@ -1,6 +1,8 @@
 // Page template Grid 
 
-.page:not(.home) .site {
+
+
+body:not(.home) .site {
 
     display: grid;
     grid-template-columns: 1fr 25vw;
@@ -10,7 +12,7 @@
 
     .site-content {
         grid-row-start: 1;
-        grid-row-end: 4;
+        grid-row-end: span 4;
     }
 
     .site-header {

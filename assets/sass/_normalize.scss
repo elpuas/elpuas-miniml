@@ -601,7 +601,7 @@ a:hover, a:active {
 }
 
 .main-navigation ul {
-	display: none;
+	// display: none;
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
@@ -645,7 +645,7 @@ a:hover, a:active {
 	text-decoration: none;
 }
 
-/* Small menu. */
+/* Small menu. 
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
@@ -659,6 +659,8 @@ a:hover, a:active {
 		display: block;
 	}
 }
+
+*/
 
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main

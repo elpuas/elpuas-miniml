@@ -126,7 +126,7 @@ function elpuas_scripts() {
 
     wp_enqueue_script( 'elpuas-scripts', get_template_directory_uri() . '/assets/js/script.min.js', array('jquery'), get_the_time('U'), true );
 
-	wp_enqueue_script( 'elpuas-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	// wp_enqueue_script( 'elpuas-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'elpuas-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 

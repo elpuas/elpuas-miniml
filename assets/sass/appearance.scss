@@ -13,6 +13,33 @@ img.custom-logo {
 // Home Module
 
 .home {
+
+    .menu {
+
+        li {
+            margin-left: .9rem;
+
+            a {
+                color: white;
+                text-decoration: none;
+                font-family: $passion-font;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+        }
+    }
+
+    .entry-content {
+        margin-top: 0;
+
+        h2 {
+            margin: 0 !important;
+            font-size: 2rem;
+            letter-spacing: 2px;
+        }
+    }
+
+
     img.custom-logo {
         min-width: 50vw;
     }
@@ -24,20 +51,16 @@ img.custom-logo {
         background-size: cover;
         padding: 10rem 5rem 0;
         text-align: -webkit-right;
-        // Grid Home Only   
+        // Grid Home Only  
+
         .site-content {
             display: -ms-grid;
             display: grid;
             grid-gap: 20px;
             grid-template-rows: 1fr 1fr 1fr;
+
             .content-area {
                 grid-row-start: 3;
-                .entry-content {
-                    margin-top: 0;
-                    h1 {
-                        margin: 0;
-                    }
-                }
             }
             // Menu Addon
             .menu-main-navigation-container {
@@ -59,7 +82,11 @@ img.custom-logo {
 
 // Page Module
 
-.page:not(.home) {
+body:not(.home) {
+
+    a.custom-logo-link {
+        z-index: 3;
+    }
 
     .site {
 
@@ -71,14 +98,28 @@ img.custom-logo {
                 font-size: 5rem;
                 line-height: 2rem;
                 padding-bottom: 0;
-                letter-spacing: 1PX;
+                letter-spacing: 1px;
                 font-weight: initial;
+            }
+
+            .entry-content{
+                &:before {
+                    content: '';
+                    display: block;
+                    position: fixed;
+                    background-color:$primary-color;
+                    width: 100vw;
+                    height: 171px;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                }
             }
         }
     }
 
     .site-header {
-
+        z-index: 2;
         .main-navigation {
             margin-top : 2rem; 
 
@@ -126,6 +167,128 @@ img.custom-logo {
 
 @media only screen and ( max-width: 900px ) {
 
+    .home {
+
+        .menu {
+            margin: 0;
+            padding: 0;
+        }
+
+        .site {
+            background-image: url();
+            padding: 1rem 2rem 0;
+            
+            .site-content {
+                grid-template-rows : 50vh 10vh auto;
+                
+
+            }
+        }
+
+        .custom-logo-link {
+            top: 18px;
+        
+            .custom-logo {
+                min-width: 80vw !important;
+            }
+        }
+    }
+
+    body:not(.home) {
+
+        img.custom-logo {
+            min-width: 45vw;
+        }
+
+        .site {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+        grid-template-rows: 1fr;
+        padding: 2rem 0 0;
+        &:before {
+            content: '';
+            width: 100vw;
+            height: 80px;
+            display: block;
+            position: fixed;
+            top: 0;
+            background-color:$primary-color;
+        }
+
+        .entry-header {
+            padding: 1rem 1.5rem;
+            h1 {
+                margin: 0;
+                font-size: 2rem !important;
+            }
+        }
+
+        .entry-content {
+            padding: 2rem 1rem 5rem;
+            word-break: break-all;
+            &:before {
+                content: none !important;
+            }
+            p {
+                font-size: 20px;
+            }
+        }
+        
+        footer {
+            position: fixed;
+            right: initial;
+            top: initial;
+            bottom: 0;
+            width: 100%;
+            background-color: $primary-color;
+            max-height: 70px;
+
+                ul {
+                    text-align: initial;
+                        li {
+                            text-align: center;
+                            display: inline-grid;
+                            width: 32.333333vw;
+                    }
+                }
+            }
+            .site-header {
+                width: 100vw;
+                position: fixed;
+                top: initial;
+                right: initial;
+                bottom: 70px;
+                .main-navigation {
+                    margin-top: 0;
+                }
+                ul {
+                    background-color: $secondary-color;
+                    li {
+                        float: initial;
+                        position: initial;
+                        text-align: initial;
+                        display: inline-block;
+                        text-align: center !important;
+                        width: 23.5vw;
+                        &.current-menu-item {
+                            a {
+                                color: $light-color !important;
+                                font-size: 1.25rem !important;
+                            }
+                        }
+                        a {
+                            color: $primary-color !important;
+                            font-size: 1.25rem !important;
+                            line-height: 2rem !important;
+
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+
 }
 
 // Footer Module
@@ -141,6 +304,10 @@ img.custom-logo {
 }
 
 .home {
+
+    article {
+        margin-bottom: 0;
+    }
     
     .entry-header {
         background:initial !important;
@@ -152,18 +319,20 @@ img.custom-logo {
 
 }
 
-.page:not(.home) {
+body:not(.home) {
 
     .site-header {
         position: fixed;
         top: 20vh;
         right: 26px;
+        
     }
 
     a.custom-logo-link {
         position: fixed;
         right: 25px;
         top: 25px;
+        z-index: 3;
     }
 
     .entry-content {
@@ -176,16 +345,113 @@ img.custom-logo {
         background:$secondary-color;
         top: 0;
         padding: 1rem;
+        z-index: 2;
 
             h1 {
                 color: $primary-color;
             }
     }
 
-    footer {
+    footer:not(.entry-footer) {
         position: fixed;
         right: 25px;
         top: 60vh;
     }
 }
 
+.blog, .single {
+    article {
+        .entry-header {
+            position: initial;
+            background-color: transparent;
+            left: initial;
+            top: initial;
+            padding: 0;
+            z-index: initial;
+        }
+    }
+}
+
+.blog, .single {
+    .entry-content {
+        padding-top: 1rem !important;
+        &:before {
+            content: none !important;
+            
+        }
+    }
+    .site {
+        &:before {
+            content: none !important;
+        }
+    }
+}
+
+.elpuas__blogpost {
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    min-height: 500px;
+    padding: 150px;
+    background-color: orange !important;
+    background-blend-mode: overlay;
+    
+
+    .entry-title {
+        font-size: 3rem;
+        a {
+            color: $primary-color;
+            text-decoration: none !important;
+         &:active, &:visited {
+            color: $primary-color;
+          }
+        }
+    }
+
+    .posted-on {
+        a {
+            color: $primary-color;
+        }
+    }
+    p {
+        color: $primary-color;
+    }
+}
+
+.single .site {
+    grid-template-columns: 65vw 35vw;
+    .entry-header {
+        img {
+            width: 100%;
+        }
+        .entry-meta {
+            color: $secondary-color;
+            span {
+                a {
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
+    h1 {
+        color: $secondary-color !important;
+        font-size: 2rem !important;
+        
+    }
+}
+
+
+@media only screen and ( max-width: 900px ) {
+    .elpuas__blogpost {
+        padding: 50px;
+    }
+    .single .site {
+        grid-template-columns: 1fr;
+        
+    }
+}
+
+footer.entry-footer {
+    position: absolute;
+    background: yellow;
+    padding: 10px 20px;
+}

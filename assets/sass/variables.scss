@@ -23,7 +23,13 @@ p {
 
 a {
     color: $secondary-color;
+    text-decoration: none;
+
     &:hover{
         color: white;
     }
+}
+
+a:visited {
+    color: $secondary-color;
 }

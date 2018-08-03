@@ -1,8 +1,9 @@
 jQuery(document).ready(function($){
 
+
     // Menu Toggled Action Function
 
-    eclick();
+    /* eclick();
     
     function eclick() {
         $('.menu-toggle').click( function () {
@@ -34,6 +35,8 @@ jQuery(document).ready(function($){
         })
     }
 
+    */
+
     // Show Menu on Hover
     
     showMenu();
@@ -41,23 +44,41 @@ jQuery(document).ready(function($){
     function showMenu() {
        var $homeMenu =  $('.home .menu');
 
-       $homeMenu.css('display', 'none');
+       if ($(window).width() > 900) {
 
-       $('.site-content').hover( function() {
+        $homeMenu.css('display', 'none');
 
-        $homeMenu.fadeIn("slow");
+        $('.site-content').hover( function() {
 
-       });
-    
+            $homeMenu.fadeIn("slow");
+            });
+        } 
+
+        $(window).resize(function(){
+
+            var eventFired = 0;
+
+            if ($(window).width() > 900) {
+
+                $homeMenu.css('display', 'none');
+        
+                $('.site-content').hover( function() {
+        
+                    $homeMenu.fadeIn("slow");
+                });
+            } 
+        });
     }
+
+    
 
     // Hover Effect;
 
-    hoverEffect();
+     hoverEffect();
 
     function hoverEffect() { 
 
-        $pageMenu = $('.page:not(.home) .menu li:not(.current-menu-item)');
+        $pageMenu = $('body:not(.home) .menu li:not(.current-menu-item)');
         $pageMenu.hover( function(){
             $(this).find('a').addClass('bounceIn').css('font-size', '48px');
         }, function(){

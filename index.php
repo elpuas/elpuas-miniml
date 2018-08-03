@@ -13,7 +13,6 @@
  */
 get_header();
 ?>
-
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
@@ -74,7 +73,7 @@ if ( is_front_page() && ! is_home() ) :
 
 		include( 'template-parts/navigation.php' );
 
-		get_sidebar();
+		// get_sidebar();
 
 		get_footer();
 
