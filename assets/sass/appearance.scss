@@ -397,6 +397,7 @@ body:not(.home) {
         .entry-content {
             padding: 2rem 1rem 5rem;
             max-width: 100vw;
+            overflow-wrap: break-word;
             // word-break: break-all;
             &:before {
                 content: none !important;
