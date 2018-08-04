@@ -4,9 +4,11 @@ img.custom-logo {
     min-width: 25vw;
 }
 
-// Home Module
+// # 0.1 Home Module Desktop
 
 .home {
+     
+    // # 0.1.1 Navigation
 
     .menu {
 
@@ -23,6 +25,8 @@ img.custom-logo {
         }
     }
 
+    // # 0.1.2 Entry Content
+
     .entry-content {
         margin-top: 0;
 
@@ -33,10 +37,13 @@ img.custom-logo {
         }
     }
 
+    // # 0.1.3 Logo Settings
 
     img.custom-logo {
         min-width: 50vw;
     }
+
+    // # 0.1.4 Main Container 
 
     .site {
         height: 100vh;
@@ -46,7 +53,7 @@ img.custom-logo {
         padding: 10rem 5rem 0;
         text-align: -webkit-right;
         
-        // Grid Home Only  
+    // # 0.1.5 Grid Home Only  
 
         .site-content {
             display: -ms-grid;
@@ -57,7 +64,9 @@ img.custom-logo {
             .content-area {
                 grid-row-start: 3;
             }
-            // Menu Addon
+
+    // Menu Addon
+
             .menu-main-navigation-container {
                 overflow: hidden;
                 padding: 10px;
@@ -75,15 +84,19 @@ img.custom-logo {
     }
 }
 
-// Page Module
+// # 0.2 Page Module Desktop ( body classes .blog, .single, .page )
 
 body:not(.home) {
+
+    // # 0.2.1 Logo
 
     a.custom-logo-link {
         z-index: 3;
     }
 
     .site {
+
+    // # 0.2.2 Site Content    
 
     .site-content {
 
@@ -113,6 +126,8 @@ body:not(.home) {
         }
     }
 
+    // # 0.2.3 Site Header
+
     .site-header {
         z-index: 2;
         .main-navigation {
@@ -141,6 +156,8 @@ body:not(.home) {
         }
     }
 
+    // # 0.2.4 Footer
+
     .site-footer {
 
         .site-info {
@@ -160,13 +177,17 @@ body:not(.home) {
     }
 }
 
-// Template Styles
+
+
+// # 0.3 Articles Styles ( General )
 
 .entry-content {
     p {
         color: $light-color;
     }
 }
+
+// 0.3.1 Home Articles
 
 .home {
 
@@ -183,6 +204,8 @@ body:not(.home) {
     }
 
 }
+
+// 0.3.2 Articles Not Home Styles
 
 body:not(.home) {
 
@@ -223,6 +246,9 @@ body:not(.home) {
         top: 60vh;
     }
 }
+
+
+// # 0.4 Blog Styles 
 
 .blog, .single {
     article {
@@ -303,6 +329,8 @@ body:not(.home) {
         
     }
 }
+
+// # 0.5 Media Queries 
 
 @media only screen and ( max-width: 900px ) {
 
