@@ -138,6 +138,8 @@ embed,iframe,object{max-width:100%}
 .gallery-caption{display:block}
 body{background-color:#002e5c}
 p{font-family:"Roboto",Helvetica,Arial,sans-serif;font-size:1.8rem}
+li{font-family:"Roboto",Helvetica,Arial,sans-serif;color:#6dcff6;font-size:1.8rem}
+ul{margin:0;padding:0;list-style:none}
 a{color:#6dcff6;text-decoration:none}
 a:hover{color:white}
 a:visited{color:#6dcff6}
@@ -168,7 +170,7 @@ img.custom-logo{min-width:25vw}
 .home .entry-content{margin-top:0}
 .home .entry-content h2{margin:0 !important;font-size:2rem;letter-spacing:2px}
 .home img.custom-logo{min-width:50vw}
-.home .site{height:100vh;background-image:url(/wp-content/uploads/2018/07/Layer-2.png);background-repeat:no-repeat;background-size:cover;padding:10rem 5rem 0;text-align:-webkit-right}
+.home .site{height:100vh;background-image:url(https://www.elpuas.com/wp-content/uploads/2018/08/Layer-2.png);background-repeat:no-repeat;background-size:cover;padding:10rem 5rem 0;text-align:-webkit-right}
 .home .site .site-content{display:-ms-grid;display:grid;grid-gap:20px;-ms-grid-rows:1fr 1fr 1fr;grid-template-rows:1fr 1fr 1fr}
 .home .site .site-content .content-area{-ms-grid-row:3;grid-row-start:3}
 .home .site .site-content .menu-main-navigation-container{overflow:hidden;padding:10px}
@@ -199,7 +201,7 @@ body:not(.home) footer:not(.entry-footer){position:fixed;right:25px;top:60vh}
 .blog .entry-content,.single .entry-content{padding-top:1rem !important}
 .blog .entry-content:before,.single .entry-content:before{content:none !important}
 .blog .site:before,.single .site:before{content:none !important}
-.elpuas__blogpost{background-repeat:no-repeat !important;background-size:cover !important;min-height:500px;padding:150px;background-color:orange !important;background-blend-mode:overlay}
+.elpuas__blogpost{background-repeat:no-repeat !important;background-size:cover !important;min-height:500px;padding:150px;background-color:#00d084;background-blend-mode:overlay}
 .elpuas__blogpost .entry-title{font-size:3rem}
 .elpuas__blogpost .entry-title a{color:#002e5c;text-decoration:none !important}
 .elpuas__blogpost .entry-title a:active,.elpuas__blogpost .entry-title a:visited{color:#002e5c}
@@ -210,11 +212,16 @@ body:not(.home) footer:not(.entry-footer){position:fixed;right:25px;top:60vh}
 .single .site .entry-header .entry-meta{color:#6dcff6}
 .single .site .entry-header .entry-meta span a{color:#6dcff6}
 .single .site h1{color:#6dcff6 !important;font-size:2rem !important}
-footer.entry-footer{position:absolute;background:yellow;padding:10px 20px}
+.logged-in footer.entry-footer{position:absolute;background:yellow;padding:10px 20px}
+.blog article footer.entry-footer{display:none}
+.single .site .site-content .site-main h1{font-size:2.5rem !important;line-height:initial !important}
+.single .entry-content p{font-size:18px}
+.single .entry-content h2,.single .entry-content h3{font-size:2rem}
+.single .entry-content li{font-size:18px}
 @media(prefers-reduced-motion){.animated{-webkit-animation:unset !important;animation:unset !important;-webkit-transition:none !important;transition:none !important}
 }@media only screen and (max-width:900px){.home .menu{margin:0;padding:0}
 .home .site{background-image:url();padding:1rem 2rem 0}
-.home .site .site-content{-ms-grid-rows:50vh 10vh auto;grid-template-rows:50vh 10vh auto}
+.home .site .site-content{-ms-grid-rows:50vh 10vh auto;grid-template-rows:50vh 10vh auto;background-image:url(https://www.elpuas.com/wp-content/uploads/2018/08/skull-icon-Asset-3.svg);background-repeat:no-repeat;background-size:50%;background-position:center 15vh}
 .home .custom-logo-link{top:18px}
 .home .custom-logo-link .custom-logo{min-width:80vw !important}
 body:not(.home) img.custom-logo{min-width:45vw}
@@ -222,20 +229,26 @@ body:not(.home) .site{-ms-grid-columns:1fr;grid-template-columns:1fr;grid-gap:20
 body:not(.home) .site:before{content:'';width:100vw;height:80px;display:block;position:fixed;top:0;background-color:#002e5c}
 body:not(.home) .site .entry-header{padding:1rem 1.5rem}
 body:not(.home) .site .entry-header h1{margin:0;font-size:2rem !important}
-body:not(.home) .site .entry-content{padding:2rem 1rem 5rem;word-break:break-all}
+body:not(.home) .site .entry-content{padding:2rem 1rem 5rem;max-width:100vw}
 body:not(.home) .site .entry-content:before{content:none !important}
 body:not(.home) .site .entry-content p{font-size:20px}
-body:not(.home) .site footer{position:fixed;right:initial;top:initial;bottom:0;width:100%;background-color:#002e5c;max-height:70px}
-body:not(.home) .site footer ul{text-align:initial}
-body:not(.home) .site footer ul li{text-align:center;display:-ms-inline-grid;display:inline-grid;width:32.333333vw}
+body:not(.home) .site footer:not(.entry-footer){position:fixed;right:initial;top:initial;bottom:0;width:100%;background-color:#002e5c;max-height:70px}
+body:not(.home) .site footer:not(.entry-footer) ul{text-align:initial}
+body:not(.home) .site footer:not(.entry-footer) ul li{text-align:center;display:-ms-inline-grid;display:inline-grid;width:32.333333vw}
 body:not(.home) .site .site-header{width:100vw;position:fixed;top:initial;right:initial;bottom:70px}
 body:not(.home) .site .site-header .main-navigation{margin-top:0}
 body:not(.home) .site .site-header ul{background-color:#6dcff6}
 body:not(.home) .site .site-header ul li{float:initial;position:initial;text-align:initial;display:inline-block;text-align:center !important;width:23.5vw}
 body:not(.home) .site .site-header ul li.current-menu-item a{color:#cdf8fe !important;font-size:1.25rem !important}
 body:not(.home) .site .site-header ul li a{color:#002e5c !important;font-size:1.25rem !important;line-height:2rem !important}
+.blog .entry-content,.single .entry-content{word-break:initial !important}
+nav.navigation.post-navigation{margin-bottom:150px;padding:0 1rem}
+.single-post .site{padding:4rem 0 0 !important}
 .elpuas__blogpost{padding:50px}
 .single .site{-ms-grid-columns:1fr;grid-template-columns:1fr}
+.blog .site::before,.single .site::before{content:'' !important;width:100vw;height:85px;background-color:#012e5b !important;display:block;z-index:3;position:fixed}
+.home .entry-content h2{font-size:1.5rem;font-weight:normal}
+.home .menu li a{letter-spacing:1px;font-size:1rem}
 }@-webkit-keyframes zoomIn{from{opacity:0;-webkit-transform:scale3d(0.3,0.3,0.3);transform:scale3d(0.3,0.3,0.3)}
 50%{opacity:1}
 }@keyframes zoomIn{from{opacity:0;-webkit-transform:scale3d(0.3,0.3,0.3);transform:scale3d(0.3,0.3,0.3)}

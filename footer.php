@@ -15,14 +15,14 @@
 		<div class="site-info">
 			<ul>
 				<li>
-					<a href="#"><i class="fab fa-twitter"></i></a>
+					<a href="https://twitter.com/3lpu4s" target="_blank"><i class="fab fa-twitter"></i></a>
 				</li>
 				
 				<li>
-					<a href="#"><i class="fab fa-github"></i></a>
+					<a href="https://github.com/elpuas" target="_blank"><i class="fab fa-github"></i></a>
 				</li>
 				<li>
-					<a href="#"><i class="fab fa-wordpress"></i></a>
+					<a href="https://profiles.wordpress.org/elpuas/" target="_blank"><i class="fab fa-wordpress"></i></a>
 				</li>
 			
 			</ul>

@@ -1,39 +1,28 @@
 jQuery(document).ready(function($){
 
+     $('body:not(.home) .preloader').css('height', '0');
 
-    // Menu Toggled Action Function
+    setTimeout(function(){
+         $('.preloader').remove();
+    }, 2000);
 
-    /* eclick();
-    
-    function eclick() {
-        $('.menu-toggle').click( function () {
+    // Check if Elements Exist in the DOM
 
-           var $nav = $('.main-navigation');
-
-           var $attr = $('.menu-toggle').attr("aria-expanded","true");
-
-           if ($nav === $nav ) {
-
-            $nav.addClass('toggled');
-
-           } else {
-
-               $nav.removeClass('toggled');
-
-           }
-
-           if ($attr === $('.menu-toggle, .menu').attr("aria-expanded","true")) {
-
-            $('.menu-toggle, .menu').attr("aria-expanded","false");
-
-           } else {
-
-            $('.menu-toggle, .menu').attr("aria-expanded","true");
-
-           }
-           
-        })
+    $.fn.exists = function(callback) {
+        var args = [].slice.call(arguments, 1);
+      
+        if (this.length) {
+          callback.call(this, args);
+        }
+      
+        return this;
     }
+      
+    /* Usage
+    
+    $('CLASS').exists(function() {
+       //  Do Something
+    });
 
     */
 
@@ -69,9 +58,7 @@ jQuery(document).ready(function($){
             } 
         });
     }
-
-    
-
+ 
     // Hover Effect;
 
      hoverEffect();
@@ -79,69 +66,30 @@ jQuery(document).ready(function($){
     function hoverEffect() { 
 
         $pageMenu = $('body:not(.home) .menu li:not(.current-menu-item)');
-        $pageMenu.hover( function(){
-            $(this).find('a').addClass('bounceIn').css('font-size', '48px');
-        }, function(){
-            $(this).find('a').removeClass('bounceIn').css('font-size', '24px');
-        });
-    }
 
+        $currentItem = $('.current-menu-item a');
 
+            $pageMenu.hover( function() {
 
-    /*
-     * Ajax Transitions
-     */
+                $(this).find('a').addClass('bounceIn').css('font-size', '48px');
 
-    function addBlacklistClass() {
-        $( 'a' ).each( function() {
-            if ( this.href.indexOf('/wp-admin/') !== -1 || 
-                 this.href.indexOf('/wp-login.php') !== -1 ) {
-                $( this ).addClass( 'wp-link' );
-            }
-        });
-    }
-     
-    $( function() {
-     
-        addBlacklistClass();
-     
-        var settings = { 
-            anchors: 'a',
-            blacklist: '.wp-link',
-            onStart: {
-                duration: 280, // ms
-                render: function ( $container ) {
-                    $container.addClass( 'slide-out' );
-                }
-            },
-            onAfter: function( $container ) {
-                addBlacklistClass();
-                eclick();
-                var $hash = $( window.location.hash );
- 
-                if ( $hash.length !== 0 ) {
- 
-                    var offsetTop = $hash.offset().top;
- 
-                    $( 'body, html' ).animate( {
-                            scrollTop: ( offsetTop - 60 ),
-                        }, {
-                            duration: 280
-                    } );
-                }
-                $container.removeClass( 'slide-out' );
-                console.log($container);
-            }
-        };
-     
-        // $( '#page' ).smoothState( settings );
-    } );
+                $currentItem.css('font-size', '24px');
 
-   // $('nav button').addClass('wp-link');
+            }, function(){
 
-  
-    
-   console.log("%c Made with  💖 and a lot of  ☕ by el.puas | https://elpuas.com ", "color:#fff;background:gold;");
+                $(this).find('a').removeClass('bounceIn').css('font-size', '24px');
+
+                $currentItem.addClass('bounceIn').css('font-size', '48px');
+
+                setTimeout(function(){ 
+
+                    $currentItem.removeClass('bounceIn');
+
+                }, 500);
+            });
+    }    
+   console.log("%c Made with  💖 and a lot of  ☕ by el.puas | https://elpuas.com ", "color:#000;background:#00d084;");
+
 });
 
 

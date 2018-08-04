@@ -65,7 +65,7 @@
 
 		else : ?>
 
-		<div class="elpuas__blogpost" style="background:url(<?php the_post_thumbnail_url('large'); ?> )">
+		<div class="elpuas__blogpost" style="background-image:url(<?php the_post_thumbnail_url('large'); ?> ), linear-gradient(#ff253a, #8ed1fc, blue);">
 
 		<?php
 

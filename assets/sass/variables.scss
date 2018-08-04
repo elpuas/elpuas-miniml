@@ -21,6 +21,18 @@ p {
     font-size: $copy-font-size;
 }
 
+li {
+    font-family: $copy-font;
+    color: $secondary-color;
+    font-size: $copy-font-size;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
 a {
     color: $secondary-color;
     text-decoration: none;

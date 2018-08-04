@@ -4,12 +4,6 @@ img.custom-logo {
     min-width: 25vw;
 }
 
- @media only screen and ( max-width: 900px ) {
-
- }
-
-
-
 // Home Module
 
 .home {
@@ -46,11 +40,12 @@ img.custom-logo {
 
     .site {
         height: 100vh;
-        background-image: url(/wp-content/uploads/2018/07/Layer-2.png);
+        background-image: url(https://www.elpuas.com/wp-content/uploads/2018/08/Layer-2.png);
         background-repeat: no-repeat;
         background-size: cover;
         padding: 10rem 5rem 0;
         text-align: -webkit-right;
+        
         // Grid Home Only  
 
         .site-content {
@@ -159,141 +154,11 @@ body:not(.home) {
                     li {
                         font-size: 3rem;
                     }
+                }
             }
         }
-    }
     }
 }
-
-@media only screen and ( max-width: 900px ) {
-
-    .home {
-
-        .menu {
-            margin: 0;
-            padding: 0;
-        }
-
-        .site {
-            background-image: url();
-            padding: 1rem 2rem 0;
-            
-            .site-content {
-                grid-template-rows : 50vh 10vh auto;
-                
-
-            }
-        }
-
-        .custom-logo-link {
-            top: 18px;
-        
-            .custom-logo {
-                min-width: 80vw !important;
-            }
-        }
-    }
-
-    body:not(.home) {
-
-        img.custom-logo {
-            min-width: 45vw;
-        }
-
-        .site {
-        grid-template-columns: 1fr;
-        grid-gap: 20px;
-        grid-template-rows: 1fr;
-        padding: 2rem 0 0;
-        &:before {
-            content: '';
-            width: 100vw;
-            height: 80px;
-            display: block;
-            position: fixed;
-            top: 0;
-            background-color:$primary-color;
-        }
-
-        .entry-header {
-            padding: 1rem 1.5rem;
-            h1 {
-                margin: 0;
-                font-size: 2rem !important;
-            }
-        }
-
-        .entry-content {
-            padding: 2rem 1rem 5rem;
-            word-break: break-all;
-            &:before {
-                content: none !important;
-            }
-            p {
-                font-size: 20px;
-            }
-        }
-        
-        footer {
-            position: fixed;
-            right: initial;
-            top: initial;
-            bottom: 0;
-            width: 100%;
-            background-color: $primary-color;
-            max-height: 70px;
-
-                ul {
-                    text-align: initial;
-                        li {
-                            text-align: center;
-                            display: inline-grid;
-                            width: 32.333333vw;
-                    }
-                }
-            }
-            .site-header {
-                width: 100vw;
-                position: fixed;
-                top: initial;
-                right: initial;
-                bottom: 70px;
-                .main-navigation {
-                    margin-top: 0;
-                }
-                ul {
-                    background-color: $secondary-color;
-                    li {
-                        float: initial;
-                        position: initial;
-                        text-align: initial;
-                        display: inline-block;
-                        text-align: center !important;
-                        width: 23.5vw;
-                        &.current-menu-item {
-                            a {
-                                color: $light-color !important;
-                                font-size: 1.25rem !important;
-                            }
-                        }
-                        a {
-                            color: $primary-color !important;
-                            font-size: 1.25rem !important;
-                            line-height: 2rem !important;
-
-                        }
-                    }
-                }
-            }
-        }
-        
-    }
-
-}
-
-// Footer Module
-
-
 
 // Template Styles
 
@@ -392,7 +257,7 @@ body:not(.home) {
     background-size: cover !important;
     min-height: 500px;
     padding: 150px;
-    background-color: orange !important;
+    background-color: #00d084;
     background-blend-mode: overlay;
     
 
@@ -439,6 +304,155 @@ body:not(.home) {
     }
 }
 
+@media only screen and ( max-width: 900px ) {
+
+    .home {
+
+        .menu {
+            margin: 0;
+            padding: 0;
+        }
+
+        .site {
+            background-image: url();
+            padding: 1rem 2rem 0;
+            
+            .site-content {
+                grid-template-rows : 50vh 10vh auto;
+                background-image: url(https://www.elpuas.com/wp-content/uploads/2018/08/skull-icon-Asset-3.svg);
+                background-repeat: no-repeat;
+                background-size: 50%;
+                background-position: center 15vh;
+                
+
+            }
+        }
+
+        .custom-logo-link {
+            top: 18px;
+        
+            .custom-logo {
+                min-width: 80vw !important;
+            }
+        }
+    }
+
+    body:not(.home) {
+
+        img.custom-logo {
+            min-width: 45vw;
+        }
+
+        .site {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+        grid-template-rows: 1fr;
+        padding: 2rem 0 0;
+        &:before {
+            content: '';
+            width: 100vw;
+            height: 80px;
+            display: block;
+            position: fixed;
+            top: 0;
+            background-color:$primary-color;
+        }
+
+        .entry-header {
+            padding: 1rem 1.5rem;
+            h1 {
+                margin: 0;
+                font-size: 2rem !important;
+            }
+        }
+
+        .entry-content {
+            padding: 2rem 1rem 5rem;
+            max-width: 100vw;
+            // word-break: break-all;
+            &:before {
+                content: none !important;
+            }
+            p {
+                font-size: 20px;
+            }
+        }
+        
+        footer:not(.entry-footer) {
+            position: fixed;
+            right: initial;
+            top: initial;
+            bottom: 0;
+            width: 100%;
+            background-color: $primary-color;
+            max-height: 70px;
+
+                ul {
+                    text-align: initial;
+                        li {
+                            text-align: center;
+                            display: inline-grid;
+                            width: 32.333333vw;
+                    }
+                }
+            }
+            .site-header {
+                width: 100vw;
+                position: fixed;
+                top: initial;
+                right: initial;
+                bottom: 70px;
+                .main-navigation {
+                    margin-top: 0;
+                }
+                ul {
+                    background-color: $secondary-color;
+                    li {
+                        float: initial;
+                        position: initial;
+                        text-align: initial;
+                        display: inline-block;
+                        text-align: center !important;
+                        width: 23.5vw;
+                        &.current-menu-item {
+                            a {
+                                color: $light-color !important;
+                                font-size: 1.25rem !important;
+                            }
+                        }
+                        a {
+                            color: $primary-color !important;
+                            font-size: 1.25rem !important;
+                            line-height: 2rem !important;
+
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+
+    /* Hacks Mobile */
+
+    .blog .entry-content, .single .entry-content {
+
+            word-break: initial !important;
+        
+    } 
+
+    nav.navigation.post-navigation {
+        margin-bottom: 150px;
+        padding: 0 1rem;
+    }
+
+    .single-post .site {
+        padding: 4rem 0 0 !important;
+    }
+
+}
+
+// Footer Module
 
 @media only screen and ( max-width: 900px ) {
     .elpuas__blogpost {
@@ -448,10 +462,55 @@ body:not(.home) {
         grid-template-columns: 1fr;
         
     }
+
+    .blog .site::before, .single .site::before {
+        content: '' !important;
+        width: 100vw;
+        height: 85px;
+        background-color: #012e5b !important;
+        display: block;
+        z-index: 3;
+        position: fixed;
+    }
+
+    .home .entry-content h2 {
+        font-size: 1.5rem;
+        font-weight: normal;
+    }
+
+    .home .menu li a {
+        letter-spacing: 1px;
+        font-size: 1rem;
+    }
 }
 
-footer.entry-footer {
+.logged-in footer.entry-footer {
     position: absolute;
     background: yellow;
     padding: 10px 20px;
 }
+
+.blog article footer.entry-footer {
+    display: none;
+}
+
+.single {
+    .site .site-content .site-main h1 {
+        font-size: 2.5rem  !important;
+        line-height: initial !important;
+
+    }
+    .entry-content {
+        p {
+            font-size: 18px;
+        }
+        
+        h2, h3 {
+            font-size: 2rem;
+        }
+        li {
+            font-size: 18px;
+        }
+    }
+}
+
