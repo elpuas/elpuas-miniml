@@ -87,7 +87,27 @@ jQuery(document).ready(function($){
 
                 }, 500);
             });
-    }    
+    }  
+    
+    // Toggle Bar
+    
+    toggleBar();
+
+    function toggleBar() {
+        $button = $('.social');
+        $footer = $('.site-footer');
+
+        if ( $( window ).width() < 900 ) {
+            $button.click( function() {
+                $footer.slideToggle();
+
+            })
+        }
+
+
+    }
+
+
    console.log("%c Made with  💖 and a lot of  ☕ by el.puas | https://elpuas.com ", "color:#000;background:#00d084;");
 
 });

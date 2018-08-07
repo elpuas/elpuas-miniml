@@ -170,7 +170,7 @@ img.custom-logo{min-width:25vw}
 .home .entry-content{margin-top:0}
 .home .entry-content h2{margin:0 !important;font-size:2rem;letter-spacing:2px}
 .home img.custom-logo{min-width:50vw}
-.home .site{height:100vh;background-image:url(https://www.elpuas.com/wp-content/uploads/2018/08/Layer-2.png);background-repeat:no-repeat;background-size:cover;padding:10rem 5rem 0;text-align:-webkit-right}
+.home .site{height:100vh;background-image:url(https://www.elpuas.com/wp-content/uploads/2018/08/Layer-2.png);background-repeat:no-repeat;background-size:cover;padding:10rem 5rem 0;text-align:right}
 .home .site .site-content{display:-ms-grid;display:grid;grid-gap:20px;-ms-grid-rows:1fr 1fr 1fr;grid-template-rows:1fr 1fr 1fr}
 .home .site .site-content .content-area{-ms-grid-row:3;grid-row-start:3}
 .home .site .site-content .menu-main-navigation-container{overflow:hidden;padding:10px}
@@ -232,15 +232,15 @@ body:not(.home) .site .entry-header h1{margin:0;font-size:2rem !important}
 body:not(.home) .site .entry-content{padding:2rem 1rem 5rem;max-width:100vw;overflow-wrap:break-word}
 body:not(.home) .site .entry-content:before{content:none !important}
 body:not(.home) .site .entry-content p{font-size:20px}
-body:not(.home) .site footer:not(.entry-footer){position:fixed;right:initial;top:initial;bottom:0;width:100%;background-color:#002e5c;max-height:70px}
+body:not(.home) .site footer:not(.entry-footer){position:fixed;right:initial;top:initial;bottom:40px;width:100%;background-color:#002e5c;max-height:70px}
 body:not(.home) .site footer:not(.entry-footer) ul{text-align:initial}
 body:not(.home) .site footer:not(.entry-footer) ul li{text-align:center;display:-ms-inline-grid;display:inline-grid;width:32.333333vw}
-body:not(.home) .site .site-header{width:100vw;position:fixed;top:initial;right:initial;bottom:70px}
+body:not(.home) .site .site-header{width:100vw;position:fixed;top:initial;right:initial;bottom:0}
 body:not(.home) .site .site-header .main-navigation{margin-top:0}
 body:not(.home) .site .site-header ul{background-color:#6dcff6}
-body:not(.home) .site .site-header ul li{float:initial;position:initial;text-align:initial;display:inline-block;text-align:center !important;width:23.5vw}
+body:not(.home) .site .site-header ul li{float:initial;position:initial;text-align:initial;display:inline-block;text-align:center !important}
 body:not(.home) .site .site-header ul li.current-menu-item a{color:#cdf8fe !important;font-size:1.25rem !important}
-body:not(.home) .site .site-header ul li a{color:#002e5c !important;font-size:1.25rem !important;line-height:2rem !important}
+body:not(.home) .site .site-header ul li a{color:#002e5c !important;font-size:1.25rem !important;line-height:2rem !important;padding:10px 15px}
 .blog .entry-content,.single .entry-content{word-break:initial !important}
 nav.navigation.post-navigation{margin-bottom:150px;padding:0 1rem}
 .single-post .site{padding:4rem 0 0 !important}
@@ -249,6 +249,9 @@ nav.navigation.post-navigation{margin-bottom:150px;padding:0 1rem}
 .blog .site::before,.single .site::before{content:'' !important;width:100vw;height:85px;background-color:#012e5b !important;display:block;z-index:3;position:fixed}
 .home .entry-content h2{font-size:1.5rem;font-weight:normal}
 .home .menu li a{letter-spacing:1px;font-size:1rem}
+.social{display:block;color:#cdf8fe;width:30px;height:30px;background:#002e5c;padding:5px;border-radius:50%;position:fixed;bottom:10px;right:10px;z-index:1025}
+.site-footer{display:none;box-shadow:0 -4px 8px rgba(49,49,49,0.25)}
+body:not(.home) .site .site-header ul{box-shadow:0 -4px 8px rgba(49,49,49,0.25)}
 }@-webkit-keyframes zoomIn{from{opacity:0;-webkit-transform:scale3d(0.3,0.3,0.3);transform:scale3d(0.3,0.3,0.3)}
 50%{opacity:1}
 }@keyframes zoomIn{from{opacity:0;-webkit-transform:scale3d(0.3,0.3,0.3);transform:scale3d(0.3,0.3,0.3)}

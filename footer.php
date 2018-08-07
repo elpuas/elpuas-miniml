@@ -10,8 +10,12 @@
  */
 
 ?>
-
-	<footer id="colophon" class="site-footer">
+     <?php if( !is_front_page() ) : ?>
+		 <div class="social"><i class="fas fa-bullhorn"></i></div>
+	<?php   else :
+		  // Do Nothing
+	endif; ?>
+		<footer id="colophon" class="site-footer">
 		<div class="site-info">
 			<ul>
 				<li>
