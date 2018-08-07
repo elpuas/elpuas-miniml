@@ -170,7 +170,7 @@ img.custom-logo{min-width:25vw}
 .home .entry-content{margin-top:0}
 .home .entry-content h2{margin:0 !important;font-size:2rem;letter-spacing:2px}
 .home img.custom-logo{min-width:50vw}
-.home .site{height:100vh;background-image:url(https://www.elpuas.com/wp-content/uploads/2018/08/moi.jpg),-webkit-linear-gradient(#c33764,#1d2671);background-image:url(https://www.elpuas.com/wp-content/uploads/2018/08/moi.jpg),linear-gradient(#c33764,#1d2671);background-repeat:no-repeat;background-size:cover;padding:10rem 5rem 0;text-align:right;background-blend-mode:overlay;-webkit-filter:blur(0.5px);filter:blur(0.5px)}
+.home .site{height:100vh;background-image:url(https://www.elpuas.com/wp-content/uploads/2018/08/moi.jpg),-webkit-linear-gradient(#c33764,#1d2671);background-image:url(https://www.elpuas.com/wp-content/uploads/2018/08/moi.jpg),linear-gradient(#c33764,#1d2671);background-repeat:no-repeat;background-size:cover;padding:10rem 5rem 0;text-align:right;background-blend-mode:overlay}
 .home .site .site-content{display:-ms-grid;display:grid;grid-gap:20px;-ms-grid-rows:1fr 1fr 1fr;grid-template-rows:1fr 1fr 1fr}
 .home .site .site-content .content-area{-ms-grid-row:3;grid-row-start:3}
 .home .site .site-content .menu-main-navigation-container{overflow:hidden;padding:10px}
