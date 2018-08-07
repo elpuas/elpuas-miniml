@@ -47,11 +47,13 @@ img.custom-logo {
 
     .site {
         height: 100vh;
-        background-image: url(https://www.elpuas.com/wp-content/uploads/2018/08/Layer-2.png);
+        background-image: url(https://www.elpuas.com/wp-content/uploads/2018/08/moi.jpg), linear-gradient(#C33764, #1D2671);
         background-repeat: no-repeat;
         background-size: cover;
         padding: 10rem 5rem 0;
         text-align: right;
+        background-blend-mode: overlay;
+        filter: blur(0.5px);
         
     // # 0.1.5 Grid Home Only  
 
@@ -281,30 +283,32 @@ body:not(.home) {
 .elpuas__blogpost {
     background-repeat: no-repeat !important;
     background-size: cover !important;
-    min-height: 500px;
+    // min-height: 500px;
     padding: 150px;
-    background-color: #00d084;
+    // background-color: #00d084;
     background-blend-mode: overlay;
+    background-position: center;
     
 
     .entry-title {
         font-size: 3rem;
         a {
-            color: $primary-color;
+            color: $secondary-color;
             text-decoration: none !important;
          &:active, &:visited {
-            color: $primary-color;
+            color: $secondary-color;
           }
         }
     }
 
     .posted-on {
+        color: $secondary-color;
         a {
-            color: $primary-color;
+            color: $secondary-color;
         }
     }
     p {
-        color: $primary-color;
+        color: $light-color;
     }
 }
 
@@ -342,7 +346,7 @@ body:not(.home) {
         }
 
         .site {
-            background-image: url();
+            background-image: linear-gradient(#C33764, #1D2671);
             padding: 1rem 2rem 0;
             
             .site-content {
@@ -351,6 +355,10 @@ body:not(.home) {
                 background-repeat: no-repeat;
                 background-size: 50%;
                 background-position: center 15vh;
+                background-blend-mode: overlay;
+                // filter: blur(0.5px);
+
+
                 
 
             }
@@ -397,7 +405,7 @@ body:not(.home) {
         .entry-content {
             padding: 2rem 1rem 5rem;
             max-width: 100vw;
-            overflow-wrap: break-word;
+            overflow-wrap: break-word;      
             // word-break: break-all;
             &:before {
                 content: none !important;
@@ -415,6 +423,7 @@ body:not(.home) {
             width: 100%;
             background-color: $primary-color;
             max-height: 70px;
+            z-index: 1;
 
                 ul {
                     text-align: initial;
@@ -480,6 +489,21 @@ body:not(.home) {
         padding: 4rem 0 0 !important;
     }
 
+    // Blogpost Mobile
+
+    .elpuas__blogpost {
+         .entry-title {
+            font-size: 2rem;
+        }
+    
+        .posted-on {
+            // font-size: 0.75rem !important;
+        }
+        p {
+            // font-size: 0.85rem !important;
+        }
+    }
+
 }
 
 // Footer Module
@@ -497,7 +521,7 @@ body:not(.home) {
         content: '' !important;
         width: 100vw;
         height: 85px;
-        background-color: #012e5b !important;
+        background-color: $primary-color !important;
         display: block;
         z-index: 3;
         position: fixed;
@@ -544,12 +568,16 @@ body:not(.home) {
     }
 }
 
+.socialMe {
+    display: none;
+}
+
 
 // Blog Pages
 
 @media only screen and (max-width: 900px) {
 
-    .social {
+    .socialMe {
         display: block;
         color: $light-color;
         width: 30px;
@@ -575,3 +603,31 @@ body:not(.home) {
 
     
 }
+
+// Smash Ballon Plugin Hacks
+
+#sb_instagram .sbi_photo_wrap {
+    z-index: -1;
+}
+
+
+#sb_instagram #sbi_load {
+    margin-top: -25px;
+}
+
+#sb_instagram .sb_instagram_header {
+    margin-bottom: -50px;
+    padding-left: 5px !important;
+    padding-top: 5px !important;
+}
+
+// Gutenberg Plugin Hacks
+
+figure.wp-block-image.img-responsive img {
+    width: 100%;
+}
+
+figure.wp-block-image.img-responsive {
+    width: 100% !important;
+}
+

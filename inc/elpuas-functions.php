@@ -36,15 +36,6 @@ function remove_footer_admin ()
 add_filter('admin_footer_text', 'remove_footer_admin');
 
 
-/*
- *  Enqueue fonts
- */
-
-function elpuas_enqueue_fonts(){
-    wp_enqueue_style( 'elpuas-google-fonts', 'https://fonts.googleapis.com/css?family=Anton', false );
-}
-
-add_action( 'wp_enqueue_scripts', 'elpuas_enqueue_fonts' );
 
 /*
  * Add Font Awesome 
@@ -92,3 +83,38 @@ function elpuas_excerpt_more( $more ) {
 }
 add_filter( 'excerpt_more', 'elpuas_excerpt_more' );
 
+/**
+ *	Loads an alternate stylesheet, rather than the default style.css required by WordPress
+ *	This does not replace the requirement of including a style.css in your theme
+ *
+ *	@author Ren Ventura <EngageWP.com>
+ *	@link http://www.engagewp.com/load-minified-stylesheet-without-theme-header-wordpress
+ *
+ *	@param (string) $stylesheet_uri - Stylesheet URI for the current theme/child theme
+ *	@param (string) $stylesheet_dir_uri - Stylesheet directory URI for the current theme/child theme
+ *	@return (string) Path to alternate stylesheet
+ */
+
+add_filter( 'stylesheet_uri', 'elpuas_load_alternate_stylesheet', 10, 2 );
+
+function elpuas_load_alternate_stylesheet( $stylesheet_uri, $stylesheet_dir_uri ) {
+
+	// Make sure this URI path is correct for your file
+    return trailingslashit( $stylesheet_dir_uri ) . 'style.min.css';
+    
+}
+
+/*
+ * Remove Query Strings From Static Resources
+ */
+
+
+function elpuas_remove_script_version( $src ){ 
+
+    $parts = explode( '?', $src ); 	
+    return $parts[0]; 
+    } 
+
+    add_filter( 'script_loader_src', 'elpuas_remove_script_version', 15, 1 ); 
+
+    add_filter( 'style_loader_src', 'elpuas_remove_script_version', 15, 1 );

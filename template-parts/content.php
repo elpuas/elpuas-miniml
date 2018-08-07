@@ -13,7 +13,7 @@
 		<?php
 		if ( is_singular() ) :
 
-			the_post_thumbnail('large');
+			// the_post_thumbnail('large');
 
 			the_title( '<h1 class="entry-title">', '</h1>' );
 
@@ -65,8 +65,7 @@
 
 		else : ?>
 
-		<div class="elpuas__blogpost" style="background-image:url(<?php the_post_thumbnail_url('large'); ?> ), linear-gradient(#ff253a, #8ed1fc, blue);">
-
+		<div class="elpuas__blogpost" style="background-image:url( <?php // the_post_thumbnail_url('large'); ?> ), linear-gradient(#C33764, #1D2671);">
 		<?php
 
 		// elpuas_post_thumbnail();

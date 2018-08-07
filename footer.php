@@ -11,7 +11,7 @@
 
 ?>
      <?php if( !is_front_page() ) : ?>
-		 <div class="social"><i class="fas fa-bullhorn"></i></div>
+		 <div class="socialMe"><i class="fas fa-bullhorn"></i></div>
 	<?php   else :
 		  // Do Nothing
 	endif; ?>
@@ -30,6 +30,7 @@
 				</li>
 			
 			</ul>
+			<!--
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'elpuas' ) ); ?>">
 				<?php
 				/* translators: %s: CMS name, i.e. WordPress. */
@@ -41,6 +42,7 @@
 				/* translators: 1: Theme name, 2: Theme author. */
 				//printf( esc_html__( 'Theme: %1$s by %2$s.', 'elpuas' ), 'elpuas', '<a href="https://elpuas.com">elpuas</a>' );
 				?>
+			-->
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

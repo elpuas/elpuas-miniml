@@ -32,7 +32,7 @@
     background-size: 10%;
     background-position: center;
     background-blend-mode: soft-light;
-	background-color: #012e5b;" 
+	background-color: #4843b7;" 
 	>
 		&nbsp;
 	</div>

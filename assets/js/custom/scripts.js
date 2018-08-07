@@ -3,8 +3,12 @@ jQuery(document).ready(function($){
      $('body:not(.home) .preloader').css('height', '0');
 
     setTimeout(function(){
-         $('.preloader').remove();
+         $('body:not(.home) .preloader').remove();
     }, 2000);
+
+    setTimeout(function(){
+        $('body.home .preloader').remove();
+   }, 500);
 
     // Check if Elements Exist in the DOM
 
@@ -94,11 +98,16 @@ jQuery(document).ready(function($){
     toggleBar();
 
     function toggleBar() {
-        $button = $('.social');
+
+        $button = $('.socialMe');
+
         $footer = $('.site-footer');
 
+
         if ( $( window ).width() < 900 ) {
+
             $button.click( function() {
+                
                 $footer.slideToggle();
 
             })
