@@ -73,6 +73,8 @@ jQuery(document).ready(function($){
 
         $currentItem = $('.current-menu-item a');
 
+        if ($(window).width() > 900) {
+
             $pageMenu.hover( function() {
 
                 $(this).find('a').addClass('bounceIn').css('font-size', '48px');
@@ -87,10 +89,32 @@ jQuery(document).ready(function($){
 
                 setTimeout(function(){ 
 
-                    $currentItem.removeClass('bounceIn');
+                $currentItem.removeClass('bounceIn');
 
                 }, 500);
             });
+            
+        } else if ($(window).width() < 900) {
+
+                $pageMenu.click( function() {
+        
+                    $(this).find('a').addClass('bounceIn').css('font-size', '48px');
+        
+                    $currentItem.css('font-size', '24px');
+        
+                }, function(){
+        
+                    $(this).find('a').removeClass('bounceIn').css('font-size', '24px');
+        
+                    $currentItem.addClass('bounceIn').css('font-size', '48px');
+        
+                    setTimeout(function(){ 
+        
+                        $currentItem.removeClass('bounceIn');
+        
+                }, 500);
+            });
+        }  
     }  
     
     // Toggle Bar
