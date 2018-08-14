@@ -22,7 +22,16 @@
 		
 	</header><!-- .entry-header -->
 
-	<?php elpuas_post_thumbnail(); ?>
+	<?php 
+	 if ( is_front_page() && ! is_home() ) { 
+
+		 // Don't Show a Shit!
+
+	 } else {
+			
+		the_post_thumbnail('full', array('class' => 'img-responsive')); 
+		
+	 } ?>
 
 	<div class="entry-content">
 		<?php

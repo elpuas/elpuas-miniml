@@ -11,31 +11,29 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php
-		if ( is_singular() ) :
+			// if is Singular 
+			if ( is_singular() ) :
 
-			// the_post_thumbnail('large');
+				the_post_thumbnail('large');
 
-			the_title( '<h1 class="entry-title">', '</h1>' );
+				the_title( '<h1 class="entry-title">', '</h1>' );
 
-			if ( 'post' === get_post_type() ) : ?>
+				if ( 'post' === get_post_type() ) : ?>
 
-				<div class="entry-meta">
+					<div class="entry-meta">
 
+						<?php
+
+						elpuas_posted_on();
+
+						elpuas_posted_by();
+
+						?>
+					</div><!-- .entry-meta -->
 					<?php
-
-					elpuas_posted_on();
-
-					elpuas_posted_by();
-
-					?>
-				</div><!-- .entry-meta -->
-				
-		<?php
-		else :
-			
-		endif; ?>
-
-		<?php endif; ?>
+				endif; 
+				// End if is Singular
+			endif; ?>
 
 	</header><!-- .entry-header -->
 

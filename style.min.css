@@ -136,9 +136,11 @@ embed,iframe,object{max-width:100%}
 .gallery-columns-8 .gallery-item{max-width:12.5%}
 .gallery-columns-9 .gallery-item{max-width:11.11%}
 .gallery-caption{display:block}
+@font-face{font-family:HelveticaNeueLTStd-BdCn;src:url(./assets/webfonts/HelveticaNeueLTStd-BdCn.ttf);font-weight:normal}
 body{background-color:#4843b7}
-p{font-family:"Roboto",Helvetica,Arial,sans-serif;font-size:1.8rem}
-li{font-family:"Roboto",Helvetica,Arial,sans-serif;color:#6dcff6;font-size:1.8rem}
+body:not(.home) .site-content{max-width:1024px}
+p{font-family:"Roboto",Helvetica,Arial,sans-serif;font-size:24px}
+li{font-family:"Roboto",Helvetica,Arial,sans-serif;color:#6dcff6;font-size:24px}
 ul{margin:0;padding:0;list-style:none}
 a{color:#6dcff6;text-decoration:none}
 a:hover{color:white}
@@ -147,7 +149,7 @@ body:not(.home) .site{display:-ms-grid;display:grid;-ms-grid-columns:1fr 25vw;gr
 body:not(.home) .site .site-content{-ms-grid-row:1;grid-row-start:1;-ms-grid-row-span:4;grid-row-end:span 4}
 body:not(.home) .site .site-header{-ms-grid-row:2;grid-row-start:2;-ms-grid-column:2;grid-column-start:2}
 body:not(.home) .site .site-footer{-ms-grid-column:2;grid-column-start:2;-ms-grid-row:3;grid-row-start:3}
-h1,h2,h3,h4{font-family:"Anton",Impact,Helvetica,sans-serif !important;text-transform:uppercase;color:#cdf8fe;font-weight:normal !important}
+h1,h2,h3,h4{font-family:"HelveticaNeueLTStd-BdCn",Helvetica,sans-serif !important;color:#cdf8fe;font-weight:normal !important}
 .site-content{-webkit-transition:-webkit-transform .28s,opacity .28s;-webkit-transition:opacity .28s,-webkit-transform .28s;transition:opacity .28s,-webkit-transform .28s;transition:transform .28s,opacity .28s;transition:transform .28s,opacity .28s,-webkit-transform .28s}
 .slide-out .site-content{-webkit-transform:translate3d(0,100px,0);-ms-transform:translate3d(0,100px,0);transform:translate3d(0,100px,0);opacity:0}
 .animated{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both}
@@ -166,9 +168,9 @@ h1,h2,h3,h4{font-family:"Anton",Impact,Helvetica,sans-serif !important;text-tran
 .bounceOut{-webkit-animation-duration:.75s;animation-duration:.75s;-webkit-animation-name:bounceOut;animation-name:bounceOut}
 img.custom-logo{min-width:25vw}
 .home .menu li{margin-left:.9rem}
-.home .menu li a{color:white;text-decoration:none;font-family:"Anton",Impact,Helvetica,sans-serif;text-transform:uppercase;letter-spacing:1px}
+.home .menu li a{color:white;text-decoration:none;font-family:"HelveticaNeueLTStd-BdCn",Helvetica,sans-serif}
 .home .entry-content{margin-top:0}
-.home .entry-content h2{margin:0 !important;font-size:2rem;letter-spacing:2px}
+.home .entry-content h2{margin:0 !important;font-size:2rem}
 .home img.custom-logo{min-width:50vw}
 .home .site{height:100vh;background-image:url(https://www.elpuas.com/wp-content/uploads/2018/08/moi.jpg),-webkit-linear-gradient(#c33764,#1d2671);background-image:url(https://www.elpuas.com/wp-content/uploads/2018/08/moi.jpg),linear-gradient(#c33764,#1d2671);background-repeat:no-repeat;background-size:cover;padding:10rem 5rem 0;text-align:right;background-blend-mode:overlay}
 .home .site .site-content{display:-ms-grid;display:grid;grid-gap:20px;-ms-grid-rows:1fr 1fr 1fr;grid-template-rows:1fr 1fr 1fr}
@@ -178,13 +180,13 @@ img.custom-logo{min-width:25vw}
 .home .site .site-content .menu-main-navigation-container .menu li{display:inline-block}
 .home .site .site-content .menu-main-navigation-container .elpuas__intro-block{-ms-grid-row:2;grid-row-start:2}
 body:not(.home) a.custom-logo-link{z-index:3}
-body:not(.home) .site .site-content .site-main h1{font-size:5rem;line-height:2rem;padding-bottom:0;letter-spacing:1px;font-weight:initial}
+body:not(.home) .site .site-content .site-main h1{font-size:5rem;line-height:2rem;padding-bottom:0;font-weight:initial}
 body:not(.home) .site .site-content .site-main .entry-content:before{content:'';display:block;position:fixed;background-color:#4843b7;width:100vw;height:171px;top:0;left:0;z-index:1}
 body:not(.home) .site .site-header{z-index:2}
 body:not(.home) .site .site-header .main-navigation{margin-top:2rem}
 body:not(.home) .site .site-header .main-navigation li{float:initial;position:initial;text-align:right}
 body:not(.home) .site .site-header .main-navigation li.current-menu-item a{font-size:48px;color:#cdf8fe}
-body:not(.home) .site .site-header .main-navigation li a{color:#6dcff6;font-family:"Anton",Impact,Helvetica,sans-serif;text-transform:uppercase;line-height:4rem;font-size:24px}
+body:not(.home) .site .site-header .main-navigation li a{color:#6dcff6;font-family:"HelveticaNeueLTStd-BdCn",Helvetica,sans-serif;line-height:4rem;font-size:36px}
 body:not(.home) .site .site-footer .site-info ul{list-style:none;margin:0;padding:0;text-align:right}
 body:not(.home) .site .site-footer .site-info ul li{font-size:3rem}
 .entry-content p{color:#cdf8fe}
@@ -193,15 +195,13 @@ body:not(.home) .site .site-footer .site-info ul li{font-size:3rem}
 .home .entry-content{padding-top:0 !important}
 body:not(.home) .site-header{position:fixed;top:20vh;right:26px}
 body:not(.home) a.custom-logo-link{position:fixed;right:25px;top:25px;z-index:3}
-body:not(.home) .entry-content{padding-top:138px}
 body:not(.home) .entry-header{position:fixed;left:0;background:#6dcff6;top:0;padding:1rem;z-index:2}
 body:not(.home) .entry-header h1{color:#4843b7}
 body:not(.home) footer:not(.entry-footer){position:fixed;right:25px;top:60vh}
 .blog article .entry-header,.single article .entry-header{position:initial;background-color:transparent;left:initial;top:initial;padding:0;z-index:initial}
-.blog .entry-content,.single .entry-content{padding-top:1rem !important}
-.blog .entry-content:before,.single .entry-content:before{content:none !important}
-.blog .site:before,.single .site:before{content:none !important}
-.elpuas__blogpost{background-repeat:no-repeat !important;background-size:cover !important;padding:150px;background-blend-mode:overlay;background-position:center}
+.blog:not(.single) .entry-content{padding-top:120px !important}
+.blog:not(.single) .entry-content:before{background-color:#4843b7 !important}
+.elpuas__blogpost{background-repeat:no-repeat !important;background-size:cover !important;padding:75px;background-blend-mode:overlay;background-position:center}
 .elpuas__blogpost .entry-title{font-size:3rem}
 .elpuas__blogpost .entry-title a{color:#6dcff6;text-decoration:none !important}
 .elpuas__blogpost .entry-title a:active,.elpuas__blogpost .entry-title a:visited{color:#6dcff6}
@@ -215,30 +215,37 @@ body:not(.home) footer:not(.entry-footer){position:fixed;right:25px;top:60vh}
 .single .site h1{color:#6dcff6 !important;font-size:2rem !important}
 .logged-in footer.entry-footer{position:absolute;background:yellow;padding:10px 20px}
 .blog article footer.entry-footer{display:none}
-.single .site .site-content .site-main h1{font-size:2.5rem !important;line-height:initial !important}
-.single .entry-content p{font-size:18px}
-.single .entry-content h2,.single .entry-content h3{font-size:2rem}
-.single .entry-content li{font-size:18px}
+.single .site .site-content .site-main h1{font-size:36px !important;line-height:initial !important}
+.single .entry-content h2,.single .entry-content h3{font-size:36px}
 .socialMe{display:none}
 #sb_instagram .sbi_photo_wrap{z-index:-1}
 #sb_instagram #sbi_load{margin-top:-25px}
 #sb_instagram .sb_instagram_header{margin-bottom:-50px;padding-left:5px !important;padding-top:5px !important}
 figure.wp-block-image.img-responsive img{width:100%}
-figure.wp-block-image.img-responsive{width:100% !important}
+figure.wp-block-image.img-responsive,.img-responsive{width:100% !important}
+body.error404 .widget{width:50%;float:left}
+body.error404 .widget li{font-size:16px}
+body.error404 ul.playlist-spotify li{display:inline-block;margin-bottom:2rem;margin-right:2rem}
+body.error404 .page-content p{color:white}
+.blog h2.page-title.screen-reader-text{-webkit-clip-path:initial;clip-path:initial;color:#4843b7;font-size:2rem;position:fixed !important;overflow:initial;width:initial;height:initial;clip:initial;z-index:3;background-color:#6dcff6;padding:1rem 1.5rem;line-height:2rem !important}
+.blog .site-main>header{position:fixed;z-index:3;top:0}
 @media(prefers-reduced-motion){.animated{-webkit-animation:unset !important;animation:unset !important;-webkit-transition:none !important;transition:none !important}
+}@media only screen and (min-width:900px){body:not(.home):not(.single) article .wp-post-image{margin-top:139px !important}
+.blog h2.page-title.screen-reader-text{font-size:5rem;top:0;left:0;padding:70px}
+.single .entry-content:before{content:none !important}
 }@media only screen and (max-width:900px){.home .menu{margin:0;padding:0}
 .home .site{background-image:-webkit-linear-gradient(#c33764,#1d2671);background-image:linear-gradient(#c33764,#1d2671);padding:1rem 2rem 0}
 .home .site .site-content{-ms-grid-rows:50vh 10vh auto;grid-template-rows:50vh 10vh auto;background-image:url(https://www.elpuas.com/wp-content/uploads/2018/08/skull-icon-Asset-3.svg);background-repeat:no-repeat;background-size:50%;background-position:center 15vh;background-blend-mode:overlay}
 .home .custom-logo-link{top:18px}
 .home .custom-logo-link .custom-logo{min-width:80vw !important}
 body:not(.home) img.custom-logo{min-width:45vw}
-body:not(.home) .site{-ms-grid-columns:1fr;grid-template-columns:1fr;grid-gap:20px;-ms-grid-rows:1fr;grid-template-rows:1fr;padding:2rem 0 0}
-body:not(.home) .site:before{content:'';width:100vw;height:80px;display:block;position:fixed;top:0;background-color:#4843b7}
+body:not(.home) .site{-ms-grid-columns:1fr;grid-template-columns:1fr;grid-gap:20px;-ms-grid-rows:1fr;grid-template-rows:1fr;padding:0}
+body:not(.home) .site:before{content:'';width:100vw;height:64px;display:block;position:fixed;top:0;background-color:#4843b7}
 body:not(.home) .site .entry-header{padding:1rem 1.5rem}
 body:not(.home) .site .entry-header h1{margin:0;font-size:2rem !important}
-body:not(.home) .site .entry-content{padding:2rem 1rem 5rem;max-width:100vw;overflow-wrap:break-word}
+body:not(.home) .site .entry-content{padding:0 1rem 5rem;max-width:100vw;overflow-wrap:break-word}
 body:not(.home) .site .entry-content:before{content:none !important}
-body:not(.home) .site .entry-content p{font-size:20px}
+body:not(.home) .site .entry-content p{font-size:18px}
 body:not(.home) .site footer:not(.entry-footer){position:fixed;right:initial;top:initial;bottom:40px;width:100%;background-color:#4843b7;max-height:70px;z-index:1}
 body:not(.home) .site footer:not(.entry-footer) ul{text-align:initial}
 body:not(.home) .site footer:not(.entry-footer) ul li{text-align:center;display:-ms-inline-grid;display:inline-grid;width:32.333333vw}
@@ -246,20 +253,32 @@ body:not(.home) .site .site-header{width:100vw;position:fixed;top:initial;right:
 body:not(.home) .site .site-header .main-navigation{margin-top:0}
 body:not(.home) .site .site-header ul{background-color:#6dcff6}
 body:not(.home) .site .site-header ul li{float:initial;position:initial;text-align:initial;display:inline-block;text-align:center !important}
-body:not(.home) .site .site-header ul li.current-menu-item a{color:#cdf8fe !important;font-size:1.25rem !important}
-body:not(.home) .site .site-header ul li a{color:#4843b7 !important;font-size:1.25rem !important;line-height:2rem !important;padding:10px 15px}
+body:not(.home) .site .site-header ul li.current-menu-item a{color:#cdf8fe !important}
+body:not(.home) .site .site-header ul li a{color:#4843b7 !important;font-size:24px !important;line-height:2rem !important;padding:10px 5px}
+body:not(.home) .site .site-header ul li a:first-child{padding-left:10px}
 .blog .entry-content,.single .entry-content{word-break:initial !important}
 nav.navigation.post-navigation{margin-bottom:150px;padding:0 1rem}
-.single-post .site{padding:4rem 0 0 !important}
-.elpuas__blogpost .entry-title{font-size:2rem}
-.elpuas__blogpost{padding:50px}
+.single-post .site{padding:0 !important}
+.elpuas__blogpost .entry-title{font-size:36px}
+body:not(.home) a.custom-logo-link{top:15px}
+body:not(.home):not(.single) .hentry{margin:64px 0 1.5em}
+.single article .entry-header{padding:64px 0 0 !important}
+.single article .entry-header h1{padding:0 1rem}
+.single article .entry-header .entry-meta{padding:0 1rem}
+.single article .entry-content{margin-top:0;padding-top:0}
+.elpuas__blogpost{padding:2rem}
+.elpuas__blogpost h2.entry-title{margin-top:0;line-height:2.5rem}
+.blog .entry-content{padding-bottom:2rem !important}
+.blog .hentry{margin:0 !important}
+.blog .hentry:first-child{margin-top:64px}
 .single .site{-ms-grid-columns:1fr;grid-template-columns:1fr}
 .blog .site::before,.single .site::before{content:'' !important;width:100vw;height:85px;background-color:#4843b7 !important;display:block;z-index:3;position:fixed}
-.home .entry-content h2{font-size:1.5rem;font-weight:normal}
-.home .menu li a{letter-spacing:1px;font-size:1rem}
+.home .entry-content h2{font-size:24px;font-weight:normal}
+.home .menu li a{font-size:18px}
 .socialMe{display:block;color:#cdf8fe;width:30px;height:30px;background:#4843b7;padding:5px;border-radius:50%;position:fixed;bottom:10px;right:10px;z-index:1025}
 .site-footer{display:none;box-shadow:0 -4px 8px rgba(49,49,49,0.25)}
 body:not(.home) .site .site-header ul{box-shadow:0 -4px 8px rgba(49,49,49,0.25)}
+.blog:not(.single) .entry-content{padding-top:25px !important}
 }@-webkit-keyframes zoomIn{from{opacity:0;-webkit-transform:scale3d(0.3,0.3,0.3);transform:scale3d(0.3,0.3,0.3)}
 50%{opacity:1}
 }@keyframes zoomIn{from{opacity:0;-webkit-transform:scale3d(0.3,0.3,0.3);transform:scale3d(0.3,0.3,0.3)}

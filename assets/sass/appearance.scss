@@ -19,8 +19,8 @@ img.custom-logo {
                 color: white;
                 text-decoration: none;
                 font-family: $passion-font;
-                text-transform: uppercase;
-                letter-spacing: 1px;
+                // text-transform: uppercase;
+                // letter-spacing: 1px;
             }
         }
     }
@@ -33,7 +33,7 @@ img.custom-logo {
         h2 {
             margin: 0 !important;
             font-size: 2rem;
-            letter-spacing: 2px;
+            //letter-spacing: 2px;
         }
     }
 
@@ -108,7 +108,7 @@ body:not(.home) {
                 font-size: 5rem;
                 line-height: 2rem;
                 padding-bottom: 0;
-                letter-spacing: 1px;
+                // letter-spacing: 1px;
                 font-weight: initial;
             }
 
@@ -150,9 +150,9 @@ body:not(.home) {
             a {
                 color: $secondary-color;
                 font-family: $passion-font;
-                text-transform: uppercase;
+                // text-transform: uppercase;
                 line-height: 4rem;
-                font-size: 24px;
+                font-size: $DTheadingH3;
                 }
             }
         }
@@ -226,7 +226,7 @@ body:not(.home) {
     }
 
     .entry-content {
-        padding-top: 138px;
+        // padding-top: 138px;
     }
 
     .entry-header {
@@ -265,17 +265,17 @@ body:not(.home) {
     }
 }
 
-.blog, .single {
+.blog:not(.single) {
     .entry-content {
-        padding-top: 1rem !important;
+        padding-top: 120px !important;
         &:before {
-            content: none !important;
+            background-color: $primary-color !important;
             
         }
     }
     .site {
         &:before {
-            content: none !important;
+            // content: none !important;
         }
     }
 }
@@ -283,9 +283,7 @@ body:not(.home) {
 .elpuas__blogpost {
     background-repeat: no-repeat !important;
     background-size: cover !important;
-    // min-height: 500px;
-    padding: 150px;
-    // background-color: #00d084;
+    padding: 75px;
     background-blend-mode: overlay;
     background-position: center;
     
@@ -383,11 +381,11 @@ body:not(.home) {
         grid-template-columns: 1fr;
         grid-gap: 20px;
         grid-template-rows: 1fr;
-        padding: 2rem 0 0;
+        padding: 0;
         &:before {
             content: '';
             width: 100vw;
-            height: 80px;
+            height: 64px;
             display: block;
             position: fixed;
             top: 0;
@@ -403,7 +401,7 @@ body:not(.home) {
         }
 
         .entry-content {
-            padding: 2rem 1rem 5rem;
+            padding: 0 1rem 5rem;
             max-width: 100vw;
             overflow-wrap: break-word;      
             // word-break: break-all;
@@ -411,7 +409,7 @@ body:not(.home) {
                 content: none !important;
             }
             p {
-                font-size: 20px;
+                font-size: $MBcopy-font-size;
             }
         }
         
@@ -451,18 +449,19 @@ body:not(.home) {
                         text-align: initial;
                         display: inline-block;
                         text-align: center !important;
-                        // width: 20.5vw;
                         &.current-menu-item {
                             a {
                                 color: $light-color !important;
-                                font-size: 1.25rem !important;
                             }
                         }
                         a {
                             color: $primary-color !important;
-                            font-size: 1.25rem !important;
+                            font-size: $DTcopy-font-size !important;
                             line-height: 2rem !important;
-                            padding: 10px 15px;
+                            padding: 10px 5px;
+                            &:first-child {
+                                padding-left: 10px;
+                            }
 
                         }
                     }
@@ -486,14 +485,14 @@ body:not(.home) {
     }
 
     .single-post .site {
-        padding: 4rem 0 0 !important;
+        padding: 0 !important;
     }
 
     // Blogpost Mobile
 
     .elpuas__blogpost {
          .entry-title {
-            font-size: 2rem;
+            font-size: $MBheadingH1;
         }
     
         .posted-on {
@@ -503,14 +502,75 @@ body:not(.home) {
             // font-size: 0.85rem !important;
         }
     }
+    body:not(.home) a.custom-logo-link {
+        top: 15px;
+    }
 
+    body:not(.home):not(.single) {
+        .hentry {
+        margin: 64px 0 1.5em;
+        }
+        
+    }
+
+    .single article {
+        .entry-header {
+            padding: 64px 0 0 !important;
+            h1 {
+                padding: 0 1rem;
+            }
+            .entry-meta {
+                padding: 0 1rem;
+            }
+        }
+        .entry-content {
+            margin-top: 0;
+            padding-top: 0;
+        }
+    }
+
+    .blog {
+        article {
+            .entry-header {
+            // display: none;
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width: 900px) {
+    body:not(.home):not(.single) { 
+        article {
+            .wp-post-image {
+            margin-top: 139px !important;
+            // margin-left: -32px;
+            }
+        }
+    }
 }
 
 // Footer Module
 
 @media only screen and ( max-width: 900px ) {
     .elpuas__blogpost {
-        padding: 50px;
+        padding: 2rem;
+        h2.entry-title {
+            margin-top: 0;
+            line-height: 2.5rem;
+        }
+    }
+
+    .blog {
+        .entry-content {
+            padding-bottom: 2rem !important;
+        }
+        .hentry {
+            margin: 0 !important;
+            &:first-child {
+                margin-top: 64px;
+            }
+        }
     }
     .single .site {
         grid-template-columns: 1fr;
@@ -528,13 +588,13 @@ body:not(.home) {
     }
 
     .home .entry-content h2 {
-        font-size: 1.5rem;
+        font-size: $MBheadingH3;
         font-weight: normal;
     }
 
     .home .menu li a {
-        letter-spacing: 1px;
-        font-size: 1rem;
+        // letter-spacing: 1px;
+        font-size: $MBcopy-font-size;
     }
 }
 
@@ -550,20 +610,14 @@ body:not(.home) {
 
 .single {
     .site .site-content .site-main h1 {
-        font-size: 2.5rem  !important;
+        font-size: $MBheadingH1  !important;
         line-height: initial !important;
 
     }
     .entry-content {
-        p {
-            font-size: 18px;
-        }
-        
+
         h2, h3 {
-            font-size: 2rem;
-        }
-        li {
-            font-size: 18px;
+            font-size: $DTheadingH3;
         }
     }
 }
@@ -600,7 +654,13 @@ body:not(.home) {
         box-shadow: 0 -4px 8px rgba(49, 49, 49, 0.25);
     }
 
+    .single article {
 
+    }
+
+    .blog:not(.single) .entry-content {
+        padding-top: 25px !important;
+    }
     
 }
 
@@ -627,7 +687,74 @@ figure.wp-block-image.img-responsive img {
     width: 100%;
 }
 
-figure.wp-block-image.img-responsive {
+figure.wp-block-image.img-responsive, .img-responsive {
     width: 100% !important;
 }
+
+// Error 404 Page
+
+    body.error404 {
+
+        .widget {
+        width: 50%;
+        float: left;
+            li {
+            font-size: 16px;
+            }
+        }
+        ul.playlist-spotify {
+            li {
+                display: inline-block;
+                margin-bottom: 2rem;
+                margin-right: 2rem;
+            }
+        }
+        .page-content {
+            p {
+                color: white;
+            }
+        } 
+    }
+
+.blog {
+    h2.page-title.screen-reader-text {
+        clip-path: initial;
+        color: $primary-color;
+        font-size: 2rem;
+        position: fixed !important;
+        overflow: initial;
+        width: initial;
+        height: initial;
+        clip: initial;
+        z-index: 3;
+        background-color: $secondary-color;
+        padding: 1rem 1.5rem;
+        line-height: 2rem !important;
+
+    }
+    .site-main > header {
+        position: fixed;
+        z-index: 3;
+        top: 0;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .blog {
+        h2.page-title.screen-reader-text {
+            font-size: 5rem;
+            top: 0;
+            left: 0;
+            padding: 70px;
+        }
+    }
+    .single {
+        .entry-content {
+            &:before {
+                content: none !important;
+            }
+        }
+    }
+}
+
 

@@ -18,10 +18,21 @@ get_header();
 				</header><!-- .page-header -->
 
 				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'elpuas' ); ?></p>
+					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or just listen to one of my Spotify playlists?', 'elpuas' ); ?></p>
+					<ul class="playlist-spotify">
+						<li>
+							<iframe src="https://open.spotify.com/embed/user/alfredo.navas/playlist/6kkrSVxKD9wgLhaxFiQd5E" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+						</li>
+						<li>
+							<iframe src="https://open.spotify.com/embed/user/alfredo.navas/playlist/4uR3swviDYzKZGWP1bb3US" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+						</li>
+						<li>
+						<iframe src="https://open.spotify.com/embed/user/alfredo.navas/playlist/6WkG1vLY6na3aJTcCEOCCo" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+						</li>
+					</ul>
 
 					<?php
-					get_search_form();
+					// get_search_form();
 
 					the_widget( 'WP_Widget_Recent_Posts' );
 					?>
@@ -56,4 +67,10 @@ get_header();
 	</div><!-- #primary -->
 
 <?php
+the_custom_logo();
+
+get_template_part( 'template-parts/navigation' );
+
 get_footer();
+
+// get_sidebar();

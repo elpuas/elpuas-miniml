@@ -1,0 +1,201 @@
+/* Variables */
+
+/* Colors */
+:root {
+--gradient-color: linear-gradient(#C33764, #4843b7);
+--background-color: #cdf8fe;
+--background-transparency: #20202077;
+--magenta-color: #C33764;
+--blue-color: #4843b7;
+--purple-color: #5a2c6c;
+}
+
+/* Fonts */
+
+@font-face {
+	font-family: HelveticaNeueLTStd-BdCn;  
+	src: url(/wp-content/themes/elpuas/assets/webfonts/HelveticaNeueLTStd-BdCn.ttf);  
+	font-weight: normal;  
+}
+
+/* My Admin Shit */
+
+.wp-admin #wpadminbar #wp-admin-bar-site-name>.ab-item:before {
+    content: url(/wp-content/themes/elpuas/assets/img/white-skull.svg) !important;
+    width: 18px;
+}
+
+body:not(.login) {
+    background: #cdf8fe;
+}
+
+.edit-post-visual-editor, .edit-post-visual-editor input[type=text].editor-default-block-appender__content, .edit-post-visual-editor p {
+    font-family: Roboto, Arial, Helvetica, sans-serif !important;
+}
+
+#adminmenuback {
+    background: var(--gradient-color);
+}
+
+#adminmenu, #adminmenuwrap {
+    background: transparent;
+} 
+
+#wpadminbar {
+    color: #fff;
+    background: var(--magenta-color) !important;
+}
+
+#adminmenu li.current a.menu-top, #adminmenu li.wp-has-current-submenu .wp-submenu .wp-submenu-head, #adminmenu li.wp-has-current-submenu a.wp-has-current-submenu, .folded #adminmenu li.current.menu-top {
+    color: #fff;
+    background: #20202077 !important;
+}
+
+#adminmenu .wp-has-current-submenu .wp-submenu, #adminmenu .wp-has-current-submenu.opensub .wp-submenu, #adminmenu .wp-submenu, #adminmenu a.wp-has-current-submenu:focus+.wp-submenu, .folded #adminmenu .wp-has-current-submenu .wp-submenu {
+    background: var(--purple-color);
+}
+
+#adminmenu a:hover, #adminmenu li.menu-top:hover, #adminmenu li.opensub>a.menu-top, #adminmenu li>a.menu-top:focus {
+    color: #fff;
+    background-color: var(--background-transparency) !important;
+}
+
+#wpadminbar .ab-top-menu>li.menupop.hover>.ab-item, #wpadminbar.nojq .quicklinks .ab-top-menu>li>.ab-item:focus, #wpadminbar.nojs .ab-top-menu>li.menupop:hover>.ab-item, #wpadminbar:not(.mobile) .ab-top-menu>li:hover>.ab-item, #wpadminbar:not(.mobile) .ab-top-menu>li>.ab-item:focus {
+    color: #fff;
+    background:  var(--background-transparency) !important;
+}
+
+#wpadminbar .menupop .ab-sub-wrapper {
+    background: var(--purple-color);
+}
+
+.comment-ays, .feature-filter, .imgedit-group, .popular-tags, .stuffbox, .widgets-holder-wrap, .wp-editor-container, p.popular-tags, table.widefat {
+    background: #cdf8fe;
+    border: none;
+}
+
+.plugins tr {
+    background: transparent;
+}
+
+.plugins .active td, .plugins .active th {
+    background-color: var(--purple);
+    color: #cdf8fe;
+}
+
+.plugins .active td a, .plugins .active th a {
+    color: var(--magenta-color);
+}
+
+.active td .plugin-description p {
+    color: #cdf8fe;
+}
+
+.plugin-update-tr.active td, .plugins .active th.check-column {
+    border-left: 2px solid var(--magenta-color);
+}
+
+.plugin-install #the-list td, .plugins .active td, .plugins .active th, .plugins .inactive td, .plugins .inactive th, .upgrade .plugins td, .upgrade .plugins th {
+    box-shadow: inset 0 -1px 0 rgba(91, 157, 217, 0.25) !important;
+}
+
+.alternate, .striped>tbody>:nth-child(odd), ul.striped>:nth-child(odd) {
+    background-color: #6040a90a;
+}
+
+.media-frame-content[data-columns="8"] .attachment {
+    width: 25%;
+}
+
+.wp-core-ui .attachment-preview {
+    box-shadow: none !important;
+    background: #5d41ab14;
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.wp-core-ui .attachment .thumbnail:after {
+    box-shadow: none; 
+
+}
+
+.wp-core-ui .attachment .filename {
+    background: transparent;
+    box-shadow: none;
+    text-transform: uppercase;
+}
+
+.media-frame.mode-grid .attachment.details:focus, .media-frame.mode-grid .attachment:focus, .media-frame.mode-grid .selected.attachment:focus {
+    box-shadow: inset 0 0 2px 1px var(--background-color), inset 0 0 0 10px var(--magenta-color);
+    outline: 0;
+    border-radius: 20px;
+}
+
+.wp-filter {
+    background: var(--blue-color);
+}
+
+/* My Login Bar Shit */
+
+body.login {
+        background: #676779;;
+        background-image: url(https://www.elpuas.com/wp-content/uploads/2018/08/moi.jpg), var(--gradient-color);
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* padding: 10rem 5rem 0;
+        text-align: right; */
+        background-blend-mode: overlay;
+}
+
+.login h1 a {
+    background-image: url(https://www.elpuas.com/wp-content/uploads/2018/08/elpuas-Asset-2.svg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: initial;
+}
+
+.login #login_error, .login .message, .login .success {
+    border-left: none;
+    padding: 12px;
+    margin-left: 0;
+    margin-bottom: 20px;
+    background-color: var(--background-color);
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+    text-align: center;
+    border-radius: 10px;
+}
+
+.login form {
+    margin-top: 20px;
+    margin-left: 0;
+    padding: 26px 24px 46px;
+    background: var(--background-color);
+    box-shadow: 0 1px 3px rgba(0,0,0,.13);
+    border-radius: 10px;
+}
+
+.login form .input, .login form input[type=checkbox], .login input[type=text] {
+    background: var(--magenta-color);
+    border-radius: 10px;
+    color: white;
+}
+
+.login #backtoblog, .login #nav {
+    text-align: center;
+}
+
+.login #backtoblog a, .login #nav a {
+    color: white !important;
+}
+
+
+/* My Block Shit*/
+
+.editor-post-title__input, .wp-block-heading {
+    font-family: HelveticaNeueLTStd-BdCn !important;
+}
+
+
+

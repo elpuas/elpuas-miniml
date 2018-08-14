@@ -6,9 +6,20 @@ $light-color: #cdf8fe;
 
 // Typos
 
-$passion-font: 'Anton', Impact, Helvetica, sans-serif;
+@font-face {
+	font-family: HelveticaNeueLTStd-BdCn;  
+	src: url(./assets/webfonts/HelveticaNeueLTStd-BdCn.ttf);  
+	font-weight: normal;  
+}
+
+$passion-font: 'HelveticaNeueLTStd-BdCn', Helvetica, sans-serif;
 $copy-font: 'Roboto', Helvetica, Arial, sans-serif;
-$copy-font-size: 1.8rem;
+$DTcopy-font-size: 24px;  // Use for Copy on Desktop or Color Backgrounds
+$MBcopy-font-size: 18px;  // Use for Copy on Mobile or Light Backgrounds
+$DTheadingH1: 48px;
+$MBheadingH1: 36px;
+$DTheadingH3: 36px;
+$MBheadingH3: 24px;
 
 // Common Styles
 
@@ -16,15 +27,19 @@ body {
     background-color: $primary-color;
 }
 
+body:not(.home) .site-content {
+    max-width: 1024px;
+}
+
 p {
     font-family: $copy-font;
-    font-size: $copy-font-size;
+    font-size: $DTcopy-font-size;
 }
 
 li {
     font-family: $copy-font;
     color: $secondary-color;
-    font-size: $copy-font-size;
+    font-size: $DTcopy-font-size;
 }
 
 ul {

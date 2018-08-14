@@ -111,10 +111,50 @@ function elpuas_load_alternate_stylesheet( $stylesheet_uri, $stylesheet_dir_uri 
 
 function elpuas_remove_script_version( $src ){ 
 
-    $parts = explode( '?', $src ); 	
-    return $parts[0]; 
+        $parts = explode( '?', $src ); 	
+        return $parts[0]; 
     } 
 
     add_filter( 'script_loader_src', 'elpuas_remove_script_version', 15, 1 ); 
 
     add_filter( 'style_loader_src', 'elpuas_remove_script_version', 15, 1 );
+
+
+/**
+ * Registers an editor stylesheet for the Theme Dashboard.
+ */
+
+function my_admin_theme_style() {
+
+    wp_enqueue_style('my-admin-style', get_template_directory_uri() . '/elpuas-editor-style.css');
+}
+
+add_action('admin_enqueue_scripts', 'my_admin_theme_style');
+
+/**
+* Ad Custom Styles to Login Form
+*/
+
+function elpuas_stylesheet() {
+    wp_enqueue_style( 'custom-login', get_stylesheet_directory_uri() . '/elpuas-editor-style.css' );
+}
+add_action( 'login_enqueue_scripts', 'elpuas_stylesheet' );
+
+
+/*
+ * Gutenberg Ready
+*/
+
+add_theme_support( 'align-wide' );
+
+/*
+ * Enqueue block editor style
+ */
+
+function elpuas_block_editor_styles() {
+    
+    wp_enqueue_style( 'elpuas-block-editor-styles', get_theme_file_uri( '/elpuas-editor-style.css' ), false, '1.0', 'all' );
+}
+
+add_action( 'enqueue_block_editor_assets', 'elpuas_block_editor_styles' );
+
